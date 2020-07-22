@@ -74,11 +74,12 @@ body {
 @media only screen and (max-width: 400px) {
   body {
     flex-direction: column;
+    width: 280px;
   }
 
   .nav-menu{
     height: 40px;
-    width: 91%;
+    /* width: 100%; */
     display: grid;
     grid-template-columns: repeat(2, 38%);
     padding: 3%;
@@ -86,13 +87,13 @@ body {
 
   .header-text {
     font-size: 18px;
-    padding: 10px;
+    padding: 0;
+    align-self: center;
   }
 
-  .menu {
-    height: 40px;
-    text-align: center;
-    width: 100%;
+  .open-nav-image{
+    height: 80%;
+    align-self: center;
   }
 
   .idea-form {
