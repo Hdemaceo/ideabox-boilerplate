@@ -76,6 +76,14 @@ body {
     flex-direction: column;
   }
 
+  .nav-menu{
+    height: 40px;
+    width: 91%;
+    display: grid;
+    grid-template-columns: repeat(2, 38%);
+    padding: 3%;
+  }
+
   .header-text {
     font-size: 18px;
     padding: 10px;
