@@ -83,20 +83,44 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 38%);
     padding: 3%;
+    
   }
 
   .header-text {
-    font-size: 18px;
-    padding: 0;
-    align-self: center;
+    font-size: 90%;
+    padding-left: 0px;
+    align-self: end;
+    padding-bottom: 5%;
   }
 
   .open-nav-image{
-    height: 80%;
-    align-self: center;
+    height: 40%;
+    align-self: end;
+    padding-bottom: 5%;
   }
 
   .idea-form {
     flex-grow: 1;
+    padding: 3% 5% 5% 5%;
+    /* width: 91%; */
+  }
+
+  .ideas h3, input, button {
+    font-weight: 600;
+    margin: 2%;
+  }
+
+  .text-input{
+    border-radius: 3px;
+    font-size: 1em;
+    border: 1.5px solid #4b4b80;
+  }
+
+  .body-input{
+    background-color: white;
+    border-radius: 3px;
+    font-size: smaller;
+    border: 1.5px solid #4b4b80;
+    height: 80px;
   }
 }
