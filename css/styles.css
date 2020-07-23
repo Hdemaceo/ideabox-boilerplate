@@ -100,30 +100,39 @@ body {
     .nav-view-container{
       height: 70em;
       flex-direction: column;
-      padding: 4%;
+      padding: 0%;
       width: 12em;
+    }
+    .nav-contents{
+      padding: 3% 0% 15% 0%;
+      border-top: solid 1px;
+      border-bottom: solid 1px;
+      border-color: #353567;
+      border: 100%;
     }
 
     .show-starred-button{
       border: none;
       background-color: #5356a4;
       color: #ffffff;
-      font-size: .9em;
+      font-size: 1.0em;
       font-weight: bold;
+      /* position: center; */
       padding: 4%;
-      width: 93%;
-      border-bottom: solid 1px;
-      border-color: #353567;
+      width: 95%;
     }
 
     .nav-view-header{
       align-self: center;
       color: #ffffff;
-      font-size: 1.3em;
+      font-size: 1.0em;
+      padding: 0% 0% 5% 1%;
     }
+
     .nav-view-subheader{
       color: #a9aad2;
-      padding: 3% 0% 7% 0%;
+      padding: 5% 0% 10% 0%;
+      font-size: 12px;
     }
 
     .nav-menu {
