@@ -95,21 +95,21 @@ body {
     padding: 4%;
   }
   .show-starred-button{
-      border: none;
-      background-color: #5356a4;
-      color: #ffffff;
-      font-size: 1.4em;
-      padding: 3%;
-    }
-    .nav-view-header{
-      align-self: center;
-      color: #ffffff;
-      font-size: 1.3em;
-    }
-    .nav-view-subheader{
-      color: #a9aad2;
-      padding: 3% 0% 7% 0%;
-    }
+    border: none;
+    background-color: #5356a4;
+    color: #ffffff;
+    font-size: 1.4em;
+    padding: 3%;
+  }
+  .nav-view-header{
+    align-self: center;
+    color: #ffffff;
+    font-size: 1.3em;
+  }
+  .nav-view-subheader{
+    color: #a9aad2;
+    padding: 3% 0% 7% 0%;
+  }
 
   .nav-menu {
     display: none;
@@ -182,7 +182,29 @@ body {
     margin: 3%;
     width: 13em;
   }
-
+  .user-controls{
+   background-color: #1f1f3c;
+   display: flex;
+   justify-content: space-between;
+ }
+ .idea-img, .close-menu-img{
+   height: 30px;
+ }
+ .add-comment{
+   align-items: center;
+   color: #ffffff;
+   background-color: #5356A4;
+   display: flex;
+   justify-content: flex-start;
+ }
+ .idea-cards button{
+   background: transparent;
+   border: none;
+   height: 41px;
+   margin: 0px;
+   padding: 0;
+   width: 14%;
+ }
 }
 
 @media only screen and (max-width: 400px) {
