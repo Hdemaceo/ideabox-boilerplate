@@ -71,32 +71,53 @@ body {
 
 /*=== media queries ===*/
 @media screen and (min-width: 401px) {
+  .ideas {
+    display: grid;
+    grid-template-columns: 20% 40% 40%;
+    grid-template-rows: 25% 25% 25% 25%;
+  }
+  .search-view {
+    grid-area: 1/ 2/ 1/ 1;
+  }
+  .idea-form {
+    grid-area: 1/ 5/ 3/ 2;
+  }
+  .idea-cards {
+    grid-area: 3/ 5/ 3/ 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 21fr;
+  }
+  .nav-view-container{
+    height: 70em;
+    /* display: flex; */
+    flex-direction: column;
+    padding: 4%;
+  }
+  .show-starred-button{
+      border: none;
+      background-color: #5356a4;
+      color: #ffffff;
+      font-size: 1.4em;
+      padding: 3%;
+    }
+    .nav-view-header{
+      align-self: center;
+      color: #ffffff;
+      font-size: 1.3em;
+    }
+    .nav-view-subheader{
+      color: #a9aad2;
+      padding: 3% 0% 7% 0%;
+    }
+
   .nav-menu {
     display: none;
   }
 
-  .close-nav-view{
+  .close-nav-view {
     display: none;
   }
-
-  .nav-view-container{
-    display: flex;
-    flex-direction: column;
-    align: left;
-    padding: 4%;
-  }
-  .nav-view-header{
-    align-self: center;
-    color: #ffffff;
-    font-size: 1.3em;
-    height: 100%;
-  }
-
-  .nav-view-subheader{
-    color: #a9aad2;
-    padding: 3% 0% 7% 0%;
-  }
-
 
   .idea-form {
     display: flex;
@@ -156,7 +177,11 @@ body {
     margin: 0;
     padding-left: 1%;
   }
-
+  .users-idea{
+    border: 1.5px solid #383861;
+    margin: 3%;
+    width: 13em;
+  }
 
 }
 
