@@ -70,6 +70,95 @@ body {
 }
 
 /*=== media queries ===*/
+@media screen and (min-width: 401px) {
+  .nav-menu {
+    display: none;
+  }
+
+  .close-nav-view{
+    display: none;
+  }
+
+  .nav-view-container{
+    display: flex;
+    flex-direction: column;
+    align: left;
+    padding: 4%;
+  }
+  .nav-view-header{
+    align-self: center;
+    color: #ffffff;
+    font-size: 1.3em;
+    height: 100%;
+  }
+
+  .nav-view-subheader{
+    color: #a9aad2;
+    padding: 3% 0% 7% 0%;
+  }
+
+
+  .idea-form {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 1% 5% 7% 5%;
+  }
+
+  .title, .body-title{
+    font-size: 1.5em;
+    font-weight: 600;
+    padding: 1% 0% 0% 0%;
+    margin: 1% 0% .5% 0%;
+  }
+
+  .text-input{
+    border-radius: 3px;
+    font-size: 1em;
+    border: 1.5px solid #4b4b80;
+    padding: 1% 0% 2% 0%;
+  }
+
+  .body-input{
+    background-color: white;
+    border: 1.5px solid #4b4b80;
+    border-radius: 3px;
+    font-size: smaller;
+    height: 17.5em;
+  }
+
+  .save-button{
+    background-color:  #383861;
+    border: none;
+    border-radius: 2px;
+    color: #EAEAF4;
+    height: 20%;
+    margin: 3.5% 0% 3.5% 0%;
+    font-size: 2em;
+  }
+
+  .search-bar{
+    display: grid;
+    grid-template-columns: 5.4% 94.6%;
+    padding-left: 0%;
+  }
+  .search-img{
+    height: 45px;
+    background-color: #4b4b80;
+    padding: 15px;
+  }
+
+  .search-input{
+    border: 1.5px solid #4b4b80;
+    border-radius: 0px 3px 3px 0px;
+    font-size: 1.5em;
+    height: 70px;
+    margin: 0;
+    padding-left: 1%;
+  }
+
+
+}
 
 @media only screen and (max-width: 400px) {
   body {
@@ -153,7 +242,7 @@ body {
     font-weight: 600;
     padding: 0%;
   }
-  
+
   .search-img {
     height: 29px;
     background-color: #4b4b80;
@@ -168,7 +257,7 @@ body {
     margin: 0;
     padding-left: 3%;
   }
-  
+
   .users-idea{
     border: 1.5px solid #383861;
     margin: 3%;
@@ -180,7 +269,7 @@ body {
     display: flex;
     justify-content: space-between;
   }
-  
+
   .idea-img, .close-menu-img{
     height: 30px;
   }
@@ -208,16 +297,16 @@ body {
     line-height: 117%;
     margin: 5% 4% 5% 4%;
   }
-  
+
   .idea-title{
     font-weight: 600;
     padding-bottom: 5%;
   }
-  
+
   .idea-text{
     font-weight: 300;
   }
-  
+
   .nav-view-container{
     display: flex;
     flex-direction: column;
