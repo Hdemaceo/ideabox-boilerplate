@@ -11,6 +11,7 @@ html, body {
 
 body {
   display: flex;
+  font-family: 'Open Sans';
 }
 
 /*=== Background Colors ===*/
@@ -36,7 +37,6 @@ body {
 
 .header-text {
   color: #EAEAF4;
-  font-family: 'Open Sans';
   font-weight: bold;
   padding: 20px;
 }
@@ -74,20 +74,182 @@ body {
 @media only screen and (max-width: 400px) {
   body {
     flex-direction: column;
+    width: 400px;
+  }
+
+  .nav-menu{
+    height: 57px;
+    display: grid;
+    grid-template-columns: repeat(2, 38%);
+    padding: 1% 1% 2% 3%;
   }
 
   .header-text {
-    font-size: 18px;
-    padding: 10px;
+    align-self: end;
+    font-size: 140%;
+    padding-left: 0px;
+    padding-bottom: 5%;
   }
 
-  .menu {
-    height: 40px;
-    text-align: center;
-    width: 100%;
+  .open-nav-image{
+    align-self: end;
+    height: 60%;
+    padding-bottom: 5%;
   }
 
   .idea-form {
+    display: flex;
+    flex-direction: column;
     flex-grow: 1;
+    padding: 3% 5% 7% 5%;
+  }
+
+  .title, .body-title{
+    font-size: 1.1em;
+    font-weight: 600;
+    padding: 2% 0% 2% 0%;
+    margin: 4% 0% 0% 0%;
+  }
+
+  .text-input{
+    border-radius: 3px;
+    font-size: 1em;
+    border: 1.5px solid #4b4b80;
+    padding: 4% 0% 4% 0%;
+  }
+
+  .body-input{
+    background-color: white;
+    border: 1.5px solid #4b4b80;
+    border-radius: 3px;
+    font-size: smaller;
+    height: 9.5em;
+  }
+
+  .search-bar{
+    display: grid;
+    grid-template-columns: 12% 88%;
+    padding-left: 3%;
+  }
+
+  ::placeholder{
+    color: #5356A4;
+  }
+
+  .save-button{
+    background-color:  #383861;
+    border: none;
+    border-radius: 2px;
+    color: #EAEAF4;
+    height: 20%;
+    margin: 5% 0% 5% 0%;
+    font-size: 1.3em;
+  }
+
+
+  .search-bar{
+    display: grid;
+    grid-template-columns: 12% 88%;
+    font-weight: 600;
+    padding: 0%;
+  }
+  
+  .search-img {
+    height: 29px;
+    background-color: #4b4b80;
+    padding: 8px;
+  }
+
+  .search-input{
+    border: 1.5px solid #4b4b80;
+    border-radius: 0px 3px 3px 0px;
+    font-size: smaller;
+    height: 40px;
+    margin: 0;
+    padding-left: 3%;
+  }
+  
+  .users-idea{
+    border: 1.5px solid #383861;
+    margin: 3%;
+    width: 90%;
+  }
+
+  .user-controls{
+    background-color: #1f1f3c;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .idea-img, .close-menu-img{
+    height: 30px;
+  }
+
+  .add-comment{
+    align-items: center;
+    color: #ffffff;
+    background-color: #5356A4;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .idea-cards button{
+    background: transparent;
+    border: none;
+    height: 41px;
+    margin: 0px;
+    padding: 0;
+    width: 14%;
+  }
+
+  .main-idea{
+    font-size: 1em;
+    letter-spacing: 1px;
+    line-height: 117%;
+    margin: 5% 4% 5% 4%;
+  }
+  
+  .idea-title{
+    font-weight: 600;
+    padding-bottom: 5%;
+  }
+  
+  .idea-text{
+    font-weight: 300;
+  }
+  
+  .nav-view-container{
+    display: flex;
+    flex-direction: column;
+    padding: 4%;
+  }
+
+  .show-starred-button{
+    border: none;
+    background-color: #5356a4;
+    color: #ffffff;
+    font-size: 1.4em;
+    padding: 3%;
+  }
+
+  .nav-view-header{
+    align-self: center;
+    color: #ffffff;
+    font-size: 1.3em;
+  }
+
+  .nav-view-subheader{
+    color: #a9aad2;
+    padding: 3% 0% 7% 0%;
+  }
+
+  .close-nav-view{
+    align-self: start;
+    height: 65px;
+  }
+
+  .top-nav-bar{
+    display: grid;
+    grid-template-columns: 40% 20%;
   }
 }

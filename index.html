@@ -3,21 +3,22 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Open%20Sans" rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="reset" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <title>Idea Box</title>
   </head>
   <body class="purple-1">
     <nav class="nav-menu purple-4">
-      <img class="menu-image" src="assets/menu.svg" alt="Menu Icon">
+      <img class="open-nav-image" src="assets/menu.svg" alt="Menu Icon">
       <h1 class="header-text">IdeaBox</h1>
     </nav>
+
     <main class="ideas">
       <form class="idea-form purple-2">
         <h3 class="title">Title</h3>
         <input class="text-input" type="text">
-        <h3 class="idea-body">Body</h3>
+        <h3 class="body-title">Body</h3>
         <input class="body-input" type="text">
         <button class="save-button">Save</button>
         <div class="search-bar">
@@ -25,9 +26,10 @@
           <input src="" class="search-input" type="text" placeholder="Search ideas">
         </div>
       </form>
+
       <section class="idea-cards">
         <article class="users-idea">
-          <div class="controls">
+          <div class="user-controls">
             <button><img class="idea-img star" src="assets/star.svg" alt="Star icon"></button>
             <button><img class="idea-img close" src="assets/delete.svg" alt="Delete icon"></button>
           </div>
@@ -41,13 +43,20 @@
           </div>
         </article>
       </section>
+
       <section class="search-view">
-        <nav class="nav-view purple-4">
-          <img class="close-menu-img" src="assets/delete.svg" alt="Delete Icon">
-          <h1 class="nav-view-title">IdeaBox</h1>
-          <h4 class="nav-view-body">Filter Starred Ideas</h4>
+        <nav class="nav-view-container purple-4">
+          
+          <div class="top-nav-bar">
+            <img class="close-nav-view" src="assets/delete.svg" alt="Delete Icon">
+            <h1 class="nav-view-header">IdeaBox</h1>
+            
+          </div>
+
+          <h4 class="nav-view-subheader">Filter Starred Ideas</h4>
           <button class="show-starred-button">Show Starred Ideas</button>
         </nav>
+
       </section>
     </main>
   </body>
