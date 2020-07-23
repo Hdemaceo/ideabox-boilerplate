@@ -106,12 +106,14 @@ body {
 
     .show-starred-button{
       border: none;
-      
       background-color: #5356a4;
       color: #ffffff;
       font-size: .9em;
-      padding: 3%;
+      font-weight: bold;
+      padding: 4%;
       width: 93%;
+      border-bottom: solid 1px;
+      border-color: #353567;
     }
 
     .nav-view-header{
@@ -138,7 +140,6 @@ body {
       flex-grow: 1;
       height: 21em;
       padding: 2% 0% 4% 0%;
-      width: 45em;
       align-items: center;
     }
 
@@ -206,9 +207,11 @@ body {
     background-color: #1f1f3c;
     display: flex;
     justify-content: space-between;
+    height: 30px;
+    align-items: center;
   }
   .idea-img, .close-menu-img{
-    height: 30px;
+    height: 25px;
   }
 
   .add-comment{
@@ -217,6 +220,7 @@ body {
     background-color: #5356A4;
     display: flex;
     justify-content: flex-start;
+    height:30px;
   }
   .idea-cards button{
     background: transparent;
@@ -231,7 +235,10 @@ body {
     height: 116px;
     letter-spacing: 1px;
     line-height: 117%;
-    margin: 5% 4% 5% 4%;
+    margin: 0% 0% 0% 0%;
+    background-color: white;
+    padding: 8% 4% 8% 3%;
+    overflow: scroll;
   }
 
   .idea-title{
@@ -395,7 +402,7 @@ body {
     display: flex;
     flex-direction: column;
     padding: 4%;
-    
+
   }
 
   .show-starred-button{
