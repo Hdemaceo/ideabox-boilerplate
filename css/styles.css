@@ -71,174 +71,177 @@ body {
 
 /*=== media queries ===*/
 @media screen and (min-width: 401px) {
-  .ideas {
-    display: grid;
-    grid-template-columns: 20% 40% 40%;
-    grid-template-rows: 7em 15em;
-  }
+    .ideas {
+      display: grid;
+      grid-template-columns: 20% 40% 40%;
+      grid-template-rows: 7em 15em;
+    }
 
-  .ideas h3, input, button{
-    width: 50%;
-  }
-  .search-view {
-    grid-area: 1/ 2/ 1/ 1;
-  }
+    .ideas h3, input, button{
+      width: 50%;
+    }
+    .search-view {
+      grid-area: 1/ 2/ 1/ 1;
+    }
 
-  .idea-form {
-    grid-area: 1/ 5/ 3/ 2;
-  }
+    .idea-form {
+      grid-area: 1/ 5/ 3/ 2;
+    }
 
-  .idea-cards {
-    grid-area: 3/ 5/ 3/ 2;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    padding: 2em 0em 1em 0em;
-    width: 52em;
-  }
+    .idea-cards {
+      grid-area: 3/ 5/ 3/ 2;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+      padding: 2em 0em 1em 0em;
+      width: 52em;
+    }
 
-  .nav-view-container{
-    height: 70em;
-    flex-direction: column;
-    padding: 4%;
-    width: 11.7em;
-  }
+    .nav-view-container{
+      height: 70em;
+      flex-direction: column;
+      padding: 4%;
+      width: 11.7em;
+    }
 
-  .show-starred-button{
-    border: none;
-    
-    background-color: #5356a4;
-    color: #ffffff;
-    font-size: .9em;
-    padding: 3%;
-    width: 93%;
-  }
+    .show-starred-button{
+      border: none;
+      
+      background-color: #5356a4;
+      color: #ffffff;
+      font-size: .9em;
+      padding: 3%;
+      width: 93%;
+    }
 
-  .nav-view-header{
-    align-self: center;
-    color: #ffffff;
-    font-size: 1.3em;
-  }
-  .nav-view-subheader{
-    color: #a9aad2;
-    padding: 3% 0% 7% 0%;
-  }
+    .nav-view-header{
+      align-self: center;
+      color: #ffffff;
+      font-size: 1.3em;
+    }
+    .nav-view-subheader{
+      color: #a9aad2;
+      padding: 3% 0% 7% 0%;
+    }
 
-  .nav-menu {
-    display: none;
-  }
+    .nav-menu {
+      display: none;
+    }
 
-  .close-nav-view {
-    display: none;
-  }
+    .close-nav-view {
+      display: none;
+    }
 
-  .idea-form {
+    .idea-form {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      height: 21em;
+      padding: 2% 0% 4% 0%;
+      width: 45em;
+      align-items: center;
+    }
+
+    .title, .body-title{
+      font-size: 1.5em;
+      font-weight: 600;
+      padding: 1% 0% 0% 0%;
+      margin: 1% 0% .5% 0%;
+    }
+
+    .text-input{
+      border-radius: 3px;
+      font-size: 1em;
+      border: 1.5px solid #4b4b80;
+      padding: 1% 0% 2% 0%;
+    }
+
+    .body-input{
+      background-color: white;
+      border: 1.5px solid #4b4b80;
+      border-radius: 3px;
+      font-size: smaller;
+      height: 17.5em;
+      padding: 4% 0% 4% 0%;
+    }
+
+    .save-button{
+      background-color:  #383861;
+      border: none;
+      border-radius: 2px;
+      color: #EAEAF4;
+      height: 20%;
+      margin: 3.5% 0% 3.5% 0%;
+      font-size: 2em;
+    }
+
+    .search-bar{
+      display: grid;
+      grid-template-columns: 11% 90%;
+      padding-left: 0%;
+    }
+
+    .search-img{
+      height: 22px;
+      background-color: #4b4b80;
+      padding: 9px;
+    }
+
+    .search-input{
+      border: 1.5px solid #4b4b80;
+      border-radius: 0px 3px 3px 0px;
+      font-size: 1em;
+      height: 35px;
+      margin: 0;
+      padding-left: 0%;
+      width: 318px;
+    }
+
+    .users-idea{
+      border: 1.5px solid #383861;
+      margin: 3%;
+      width: 13em;
+    }
+    .user-controls{
+    background-color: #1f1f3c;
     display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    height: 21em;
-    padding: 2% 0% 4% 0%;
-    width: 45em;
+    justify-content: space-between;
+  }
+  .idea-img, .close-menu-img{
+    height: 30px;
+  }
+
+  .add-comment{
     align-items: center;
+    color: #ffffff;
+    background-color: #5356A4;
+    display: flex;
+    justify-content: flex-start;
   }
-
-  .title, .body-title{
-    font-size: 1.5em;
-    font-weight: 600;
-    padding: 1% 0% 0% 0%;
-    margin: 1% 0% .5% 0%;
-  }
-
-  .text-input{
-    border-radius: 3px;
-    font-size: 1em;
-    border: 1.5px solid #4b4b80;
-    padding: 1% 0% 2% 0%;
-  }
-
-  .body-input{
-    background-color: white;
-    border: 1.5px solid #4b4b80;
-    border-radius: 3px;
-    font-size: smaller;
-    height: 17.5em;
-    padding: 4% 0% 4% 0%;
-  }
-
-  .save-button{
-    background-color:  #383861;
+  .idea-cards button{
+    background: transparent;
     border: none;
-    border-radius: 2px;
-    color: #EAEAF4;
-    height: 20%;
-    margin: 3.5% 0% 3.5% 0%;
-    font-size: 2em;
+    height: 41px;
+    margin: 0px;
+    padding: 0;
+    width: 14%;
   }
-
-  .search-bar{
-    display: grid;
-    grid-template-columns: 11% 90%;
-    padding-left: 0%;
-  }
-
-  .search-img{
-    height: 22px;
-    background-color: #4b4b80;
-    padding: 9px;
-  }
-
-  .search-input{
-    border: 1.5px solid #4b4b80;
-    border-radius: 0px 3px 3px 0px;
+  .main-idea{
     font-size: 1em;
-    height: 35px;
-    margin: 0;
-    padding-left: 0%;
-    width: 318px;
+    height: 116px;
+    letter-spacing: 1px;
+    line-height: 117%;
+    margin: 5% 4% 5% 4%;
   }
 
-  .users-idea{
-    border: 1.5px solid #383861;
-    margin: 3%;
-    width: 13em;
+  .idea-title{
+    font-weight: 600;
+    padding-bottom: 5%;
   }
-  .user-controls{
-   background-color: #1f1f3c;
-   display: flex;
-   justify-content: space-between;
- }
- .idea-img, .close-menu-img{
-   height: 30px;
- }
 
- .add-comment{
-   align-items: center;
-   color: #ffffff;
-   background-color: #5356A4;
-   display: flex;
-   justify-content: flex-start;
- }
- .idea-cards button{
-   background: transparent;
-   border: none;
-   height: 41px;
-   margin: 0px;
-   padding: 0;
-   width: 14%;
- }
- .main-idea{
-  font-size: 1em;
-  letter-spacing: 1px;
-  line-height: 117%;
-  margin: 5% 4% 5% 4%;
-}
-.idea-title{
-  font-weight: 600;
-  padding-bottom: 5%;
-}
-.idea-text{
-  font-weight: 300;
-}
+  .idea-text{
+    font-weight: 300;
+  }
 }
 
 @media only screen and (max-width: 400px) {
