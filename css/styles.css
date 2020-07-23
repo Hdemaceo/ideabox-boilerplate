@@ -74,7 +74,7 @@ body {
     .ideas {
       display: grid;
       grid-template-columns: 20% 40% 40%;
-      grid-template-rows: 7em 15em;
+      grid-template-rows: 20% 80%;
     }
 
     .ideas h3, input, button{
@@ -90,11 +90,13 @@ body {
 
     .idea-cards {
       grid-area: 3/ 5/ 3/ 2;
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr 1fr;
-      padding: 3em 0em 0em 1em;
-      width: 52em;
+        display: grid;
+        grid-auto-flow: row;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
+        grid-gap: 20px;
+        padding: 5em 0em 0em 1em;
+        width: 52em;
     }
 
     .nav-view-container{
@@ -200,22 +202,22 @@ body {
       padding: 9px;
     }
 
-    .search-input{
-      border: 1.5px solid #4b4b80;
-      border-radius: 0px 3px 3px 0px;
-      font-size: 1em;
-      height: 40px;
-      margin: 0;
-      padding-left: 2%;
-      width: 318px;
-    }
+  .search-input {
+    border: 1.5px solid #4b4b80;
+    border-radius: 0px 3px 3px 0px;
+    font-size: 1em;
+    height: 40px;
+    margin: 0;
+    padding-left: 2%;
+    width: 318px;
+  }
 
-    .users-idea{
-      border: 1.5px solid #383861;
-      margin: 3%;
-      width: 13em;
-    }
-    .user-controls{
+  .users-idea{
+    border: 1.5px solid #383861;
+    margin: 3%;
+    width: 13em;
+  }
+  .user-controls{
     background-color: #1f1f3c;
     display: flex;
     justify-content: space-between;
