@@ -215,4 +215,38 @@ body {
     font-weight: 300;
   }
   
+  .nav-view-container{
+    display: flex;
+    flex-direction: column;
+    padding: 4%;
+  }
+
+  .show-starred-button{
+    border: none;
+    background-color: #5356a4;
+    color: #ffffff;
+    padding: 3%;
+    font-size: 1.4em;
+  }
+
+  .nav-view-header{
+    color: #ffffff;
+    align-self: center;
+    font-size: 1.3em;
+  }
+
+  .nav-view-subheader{
+    color: #a9aad2;
+    padding: 3% 0% 7% 0%;
+  }
+
+  .close-nav-view{
+    height: 65px;
+    align-self: start;
+  }
+
+  .top-nav-bar{
+    display: grid;
+    grid-template-columns: 40% 20%;
+  }
 }
