@@ -75,7 +75,7 @@ body {
 @media only screen and (max-width: 400px) {
   body {
     flex-direction: column;
-    width: 280px;
+    width: 400px;
   }
 
   .nav-menu{
@@ -108,7 +108,7 @@ body {
   }
 
   .title, .body-title{
-    font-size: 0.8em;
+    font-size: 1.1em;
     font-weight: 600;
     padding: 2% 0% 2% 0%;
     margin: 4% 0% 0% 0%;
@@ -141,7 +141,7 @@ body {
     color: #EAEAF4;
     height: 20%;
     margin: 5% 0% 5% 0%;
-    font-size: 1em;
+    font-size: 1.3em;
   }
 
 
@@ -153,17 +153,66 @@ body {
   }
   
   .search-img {
-    height: 18px;
+    height: 29px;
     background-color: #4b4b80;
     padding: 8px;
   }
 
   .search-input{
-    height: 29px;
+    height: 40px;
     margin: 0;
     border-radius: 0px 3px 3px 0px;
     font-size: smaller;
     border: 1.5px solid #4b4b80;
+  }
+  
+  .users-idea{
+    border: 1.5px solid #383861;
+    margin: 3%;
+    width: 90%;
+  }
+
+  .user-controls{
+    background-color: #1f1f3c;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .idea-img, .close-menu-img{
+    height: 30px;
+  }
+
+  .add-comment{
+    background-color: #5356A4;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: #ffffff;
+  }
+
+  .idea-cards button{
+    background: transparent;
+    border: none;
+    height: 41px;
+    margin: 0px;
+    padding: 0;
+    width: 14%;
+  }
+
+  .main-idea{
+    font-size: 1em;
+    letter-spacing: 1px;
+    line-height: 117%;
+    margin: 5% 4% 5% 4%;
+  }
+  
+  .idea-title{
+    font-weight: 600;
+    padding-bottom: 5%;
+  }
+  
+  .idea-text{
+    font-weight: 300;
   }
   
 }
