@@ -191,7 +191,7 @@ body {
 
     .search-bar{
       display: grid;
-      grid-template-columns: 11% 90%;
+      grid-template-columns: 12% 90%;
       padding-left: 0%;
     }
 
