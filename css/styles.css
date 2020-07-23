@@ -190,6 +190,7 @@ body {
  .idea-img, .close-menu-img{
    height: 30px;
  }
+
  .add-comment{
    align-items: center;
    color: #ffffff;
@@ -205,6 +206,19 @@ body {
    padding: 0;
    width: 14%;
  }
+ .main-idea{
+  font-size: 1em;
+  letter-spacing: 1px;
+  line-height: 117%;
+  margin: 5% 4% 5% 4%;
+}
+.idea-title{
+  font-weight: 600;
+  padding-bottom: 5%;
+}
+.idea-text{
+  font-weight: 300;
+}
 }
 
 @media only screen and (max-width: 400px) {
