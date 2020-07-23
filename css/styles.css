@@ -93,7 +93,7 @@ body {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       grid-template-rows: 1fr 1fr 1fr 1fr;
-      padding: 2em 0em 1em 0em;
+      padding: 3em 0em 0em 1em;
       width: 52em;
     }
 
@@ -101,7 +101,7 @@ body {
       height: 70em;
       flex-direction: column;
       padding: 4%;
-      width: 11.7em;
+      width: 12em;
     }
 
     .show-starred-button{
