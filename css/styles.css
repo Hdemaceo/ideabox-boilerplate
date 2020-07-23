@@ -74,7 +74,7 @@ body {
     .ideas {
       display: grid;
       grid-template-columns: 20% 40% 40%;
-      grid-template-rows: 7em 15em;
+      grid-template-rows: 20% 80%;
     }
 
     .ideas h3, input, button{
@@ -90,38 +90,50 @@ body {
 
     .idea-cards {
       grid-area: 3/ 5/ 3/ 2;
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr 1fr;
-      padding: 3em 0em 0em 1em;
-      width: 52em;
+        display: grid;
+        grid-auto-flow: row;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
+        grid-gap: 20px;
+        padding: 5em 0em 0em 1em;
+        width: 52em;
     }
 
     .nav-view-container{
       height: 70em;
       flex-direction: column;
-      padding: 4%;
-      width: 12em;
+      padding: 0%;
+    }
+    .nav-contents{
+      padding: 3% 0% 15% 0%;
+      border-top: solid 1px;
+      border-bottom: solid 1px;
+      border-color: #353567;
+      border: 100%;
     }
 
     .show-starred-button{
       border: none;
-      
       background-color: #5356a4;
       color: #ffffff;
-      font-size: .9em;
-      padding: 3%;
-      width: 93%;
+      font-size: 1.0em;
+      font-weight: bold;
+      /* position: center; */
+      padding: 4%;
+      width: 95%;
     }
 
     .nav-view-header{
       align-self: center;
       color: #ffffff;
-      font-size: 1.3em;
+      font-size: 1.0em;
+      padding: 0% 0% 5% 1%;
     }
+
     .nav-view-subheader{
       color: #a9aad2;
-      padding: 3% 0% 7% 0%;
+      padding: 5% 0% 10% 0%;
+      font-size: 12px;
     }
 
     .nav-menu {
@@ -135,34 +147,37 @@ body {
     .idea-form {
       display: flex;
       flex-direction: column;
-      flex-grow: 1;
-      height: 21em;
+      flex-grow: 2;
+      height: 400px;
       padding: 2% 0% 4% 0%;
-      width: 45em;
       align-items: center;
     }
 
     .title, .body-title{
-      font-size: 1.5em;
-      font-weight: 600;
+      font-size: 1.1em;
+      font-weight: 650;
       padding: 1% 0% 0% 0%;
-      margin: 1% 0% .5% 0%;
+      margin: 1% 2% .5% 0%;
     }
 
     .text-input{
       border-radius: 3px;
-      font-size: 1em;
+      font-size: 1.5em;
       border: 1.5px solid #4b4b80;
-      padding: 1% 0% 2% 0%;
+      padding: 1%;
     }
 
     .body-input{
       background-color: white;
       border: 1.5px solid #4b4b80;
       border-radius: 3px;
-      font-size: smaller;
-      height: 17.5em;
-      padding: 4% 0% 4% 0%;
+      font-size: 1em;
+      word-break: break-all;
+      height: em;
+      overflow: scroll;
+      /* height: 5em; */
+      padding: 1% 1% 10% 1%;
+      width: 50%;
     }
 
     .save-button{
@@ -170,45 +185,47 @@ body {
       border: none;
       border-radius: 2px;
       color: #EAEAF4;
-      height: 20%;
+      height: 50px;
       margin: 3.5% 0% 3.5% 0%;
-      font-size: 2em;
+      font-size: 1.5em;
     }
 
     .search-bar{
       display: grid;
-      grid-template-columns: 11% 90%;
+      grid-template-columns: 12% 90%;
       padding-left: 0%;
     }
 
     .search-img{
-      height: 22px;
+      height: 27px;
       background-color: #4b4b80;
       padding: 9px;
     }
 
-    .search-input{
-      border: 1.5px solid #4b4b80;
-      border-radius: 0px 3px 3px 0px;
-      font-size: 1em;
-      height: 35px;
-      margin: 0;
-      padding-left: 0%;
-      width: 318px;
-    }
+  .search-input {
+    border: 1.5px solid #4b4b80;
+    border-radius: 0px 3px 3px 0px;
+    font-size: 1em;
+    height: 40px;
+    margin: 0;
+    padding-left: 2%;
+    width: 318px;
+  }
 
-    .users-idea{
-      border: 1.5px solid #383861;
-      margin: 3%;
-      width: 13em;
-    }
-    .user-controls{
+  .users-idea{
+    border: 1.5px solid #383861;
+    margin: 3%;
+    width: 13em;
+  }
+  .user-controls{
     background-color: #1f1f3c;
     display: flex;
     justify-content: space-between;
+    height: 30px;
+    align-items: center;
   }
   .idea-img, .close-menu-img{
-    height: 30px;
+    height: 25px;
   }
 
   .add-comment{
@@ -217,6 +234,7 @@ body {
     background-color: #5356A4;
     display: flex;
     justify-content: flex-start;
+    height:30px;
   }
   .idea-cards button{
     background: transparent;
@@ -231,7 +249,10 @@ body {
     height: 116px;
     letter-spacing: 1px;
     line-height: 117%;
-    margin: 5% 4% 5% 4%;
+    margin: 0% 0% 0% 0%;
+    background-color: white;
+    padding: 8% 4% 8% 3%;
+    overflow: scroll;
   }
 
   .idea-title{
@@ -395,7 +416,7 @@ body {
     display: flex;
     flex-direction: column;
     padding: 4%;
-    
+
   }
 
   .show-starred-button{
