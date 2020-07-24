@@ -12,17 +12,16 @@ var closeNavViewButton = document.querySelector(".close-nav-view");
 
 // EVENT LISTENERS:
 
-saveButton.addEventListener("click", createNewIdeaCard)
+saveButton.addEventListener("click", createNewIdeaCard);
 
 // FUNCTIONS:
-function createNewIdeaCard() {
+function createNewIdeaCard(event) {
+  event.preventDefault()
   saveUserInput();
   storeCurrentIdea();
 }
 
-
-function saveUserInput(event) {
-  event.preventDefault()
+function saveUserInput() {
   var userTitle = titleInput.value
   var userBody = bodyInput.innerText
   currentIdea = new Idea(userTitle, userBody)
@@ -33,7 +32,7 @@ function storeCurrentIdea() {
   userIdeas.unshift(currentIdea)
 }
 
-function disableSaveButton() {
+function enableSaveButton() {
   if(titleInput.value === "" || bodyInput.innerText === "") {
     saveButton.disabled = true;
   } else {
