@@ -22,6 +22,7 @@ function createNewIdeaCard(event) {
   var storedIdea = instantiateIdea();
   storeCurrentIdea(storedIdea);
   console.log(userIdeas);
+  
 }
 
 function instantiateIdea() {
@@ -36,9 +37,11 @@ function storeCurrentIdea(storedIdea) {
 }
 
 function enableSaveButton() {
-  if(titleInput.value === "" || bodyInput.innerText === "") {
-    saveButton.disabled = true;
-  } else {
+  if(titleInput.length !== 0 && bodyInput.length !== 0) {
+    saveButton.style.opacity = 1;
     saveButton.disabled = false;
+  } else {
+    saveButton.disabled = true;
   }
 }
+function disableSaveButton
