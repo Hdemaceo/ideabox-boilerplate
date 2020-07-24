@@ -89,15 +89,15 @@ body {
   }
 
     .idea-cards {
-      grid-area: 3/ 5/ 3/ 2;
-        display: grid;
-        grid-auto-flow: row;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
-        grid-gap: 20px;
-        padding: 5em 0em 0em 1em;
-        width: 52em;
-    }
+      grid-area: 3/ 2/ 5/ 3;
+      display: grid;
+      grid-auto-flow: row;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
+      grid-gap: 13px;
+      padding: 0em 0em 0em 1em;
+      width: 52em;
+  }
 
     .nav-view-container{
       height: 70em;
