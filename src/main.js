@@ -22,7 +22,7 @@ function createNewIdeaCard(event) {
   var storedIdea = instantiateIdea();
   storeCurrentIdea(storedIdea);
   console.log(userIdeas);
-  
+
 }
 
 function instantiateIdea() {
@@ -44,4 +44,6 @@ function enableSaveButton() {
     saveButton.disabled = true;
   }
 }
-function disableSaveButton
+function disableSaveButton(){
+  
+}
