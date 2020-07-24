@@ -9,10 +9,6 @@ var showStarredIdeasButton = document.querySelector(".show-starred-button");
 var closeNavViewButton = document.querySelector(".close-nav-view");
 // var commentButton = document.querySelector(".add-comment")
 
-// GLOBAL VARIABLES DATA MODEL
-var userIdeas = [];
-var currentIdea;
-
 // EVENT LISTENERS:
 saveButton.addEventListener("click", saveUserInput)
 

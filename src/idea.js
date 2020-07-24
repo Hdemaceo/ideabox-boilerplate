@@ -1,3 +1,7 @@
+// GLOBAL VARIABLES DATA MODEL
+var userIdeas = [];
+var currentIdea;
+
 class Idea {
   constructor(title, body) {
     this.id = Date.now();
