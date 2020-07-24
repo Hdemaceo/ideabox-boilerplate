@@ -15,3 +15,12 @@ var currentIdea;
 
 // EVENT LISTENERS:
 saveButton.addEventListener("click", saveUserInput)
+
+
+// FUNCTIONS:
+function saveUserInput(event) {
+  event.preventDefault()
+  var userTitle = titleInput.value
+  var userBody = bodyInput.innerText
+  currentIdea = new Idea(userTitle, userBody)
+}
