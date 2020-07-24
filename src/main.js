@@ -17,8 +17,9 @@ saveButton.addEventListener("click", createNewIdeaCard);
 // FUNCTIONS:
 function createNewIdeaCard(event) {
   event.preventDefault()
-  saveUserInput();
-  storeCurrentIdea();
+  var storedIdea = instantiateIdea();
+  storeCurrentIdea(storedIdea);
+  console.log(userIdeas);
 }
 
 function instantiateIdea() {
@@ -28,8 +29,8 @@ function instantiateIdea() {
   return currentIdea;
 }
 
-function storeCurrentIdea() {
-  userIdeas.unshift(currentIdea)
+function storeCurrentIdea(storedIdea) {
+  userIdeas.unshift(storedIdea);
 }
 
 function enableSaveButton() {
