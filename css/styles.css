@@ -363,11 +363,11 @@ body {
     padding-left: 3%;
   }
 
-  .users-idea{
+  .users-idea {
     border: 1.5px solid #383861;
-    margin: 3%;
-    width: 90%;
-  }
+    margin: 2%;
+    width: 96%;
+}
 
   .user-controls{
     background-color: #1f1f3c;
