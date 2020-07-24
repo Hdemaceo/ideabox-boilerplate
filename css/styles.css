@@ -218,7 +218,7 @@ body {
     width: 13em;
     height: 100%;
   }
-  
+
   .user-controls{
     background-color: #1f1f3c;
     display: flex;
@@ -253,7 +253,7 @@ body {
     line-height: 117%;
     margin: 0% 0% 0% 0%;
     background-color: white;
-    padding: 8% 4% 8% 3%;
+        padding: 8% 4% 6% 3%;
     overflow: scroll;
   }
 
