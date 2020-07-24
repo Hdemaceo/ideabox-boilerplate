@@ -1,4 +1,5 @@
 // INPUTS:
+var userIdeas = [];
 var titleInput = document.querySelector(".text-input");
 var bodyInput = document.querySelector(".body-input");
 // BUTTONS:
@@ -10,32 +11,39 @@ var closeNavViewButton = document.querySelector(".close-nav-view");
 // var commentButton = document.querySelector(".add-comment")
 
 // EVENT LISTENERS:
-window.onload = disableSaveButton
-saveButton.addEventListener("click", createNewIdeaCard)
+
+saveButton.addEventListener("click", createNewIdeaCard);
+titleInput.addEventListener("keydown", enableSaveButton);
+bodyInput.addEventListener("keydown", enableSaveButton);
 
 // FUNCTIONS:
-function createNewIdeaCard() {
-  saveUserInput();
-  storeCurrentIdea();
+function createNewIdeaCard(event) {
+  event.preventDefault()
+  var storedIdea = instantiateIdea();
+  storeCurrentIdea(storedIdea);
+  console.log(userIdeas);
+
 }
 
-
-function saveUserInput(event) {
-  event.preventDefault()
+function instantiateIdea() {
   var userTitle = titleInput.value
   var userBody = bodyInput.innerText
-  currentIdea = new Idea(userTitle, userBody)
-  storeCurrentIdea();
+  var currentIdea = new Idea(userTitle, userBody)
+  return currentIdea;
 }
 
-function storeCurrentIdea() {
-  userIdeas.unshift(currentIdea)
+function storeCurrentIdea(storedIdea) {
+  userIdeas.unshift(storedIdea);
 }
 
-function disableSaveButton() {
-  if(titleInput.value === "" || bodyInput.innerText === "") {
-    saveButton.disabled = true;
-  } else {
+function enableSaveButton() {
+  if(titleInput.length !== 0 && bodyInput.length !== 0) {
+    saveButton.style.opacity = 1;
     saveButton.disabled = false;
+  } else {
+    saveButton.disabled = true;
   }
+}
+function disableSaveButton(){
+  
 }
