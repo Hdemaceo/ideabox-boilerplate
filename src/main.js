@@ -12,3 +12,6 @@ var closeNavViewButton = document.querySelector(".close-nav-view");
 // GLOBAL VARIABLES DATA MODEL
 var userIdeas = [];
 var currentIdea;
+
+// EVENT LISTENERS:
+saveButton.addEventListener("click", saveUserInput)
