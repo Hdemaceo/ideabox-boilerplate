@@ -21,11 +21,11 @@ function createNewIdeaCard(event) {
   storeCurrentIdea();
 }
 
-function saveUserInput() {
+function instantiateIdea() {
   var userTitle = titleInput.value
   var userBody = bodyInput.innerText
-  currentIdea = new Idea(userTitle, userBody)
-  storeCurrentIdea();
+  var currentIdea = new Idea(userTitle, userBody)
+  return currentIdea;
 }
 
 function storeCurrentIdea() {
