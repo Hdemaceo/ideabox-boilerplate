@@ -412,12 +412,11 @@ body {
     font-weight: 300;
   }
 
-  .nav-view-container{
-    display: flex;
+  .nav-view-container {
+    height: 70em;
     flex-direction: column;
-    padding: 4%;
-
-  }
+    padding: 7% 0% 0% 7%;
+}
 
   .show-starred-button{
     border: none;
