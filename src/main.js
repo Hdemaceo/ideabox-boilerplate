@@ -19,4 +19,9 @@ function saveUserInput(event) {
   var userTitle = titleInput.value
   var userBody = bodyInput.innerText
   currentIdea = new Idea(userTitle, userBody)
+  storeCurrentIdea();
+}
+
+function storeCurrentIdea() {
+  userIdeas.unshift(currentIdea)
 }
