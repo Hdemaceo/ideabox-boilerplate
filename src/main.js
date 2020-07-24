@@ -13,6 +13,8 @@ var closeNavViewButton = document.querySelector(".close-nav-view");
 // EVENT LISTENERS:
 
 saveButton.addEventListener("click", createNewIdeaCard);
+titleInput.addEventListener("keydown", enableSaveButton);
+bodyInput.addEventListener("keydown", enableSaveButton);
 
 // FUNCTIONS:
 function createNewIdeaCard(event) {
