@@ -99,11 +99,12 @@ body {
       width: 48em;
   }
 
-    .nav-view-container{
+    .nav-view-container {
       height: 70em;
       flex-direction: column;
-      padding: 0%;
-    }
+      padding: 7% 0% 0% 7%;
+  }
+
     .nav-contents{
       padding: 3% 0% 15% 0%;
       border-top: solid 1px;
@@ -415,9 +416,9 @@ body {
   }
 
   .nav-view-container {
-    height: 70em;
+    height: 13em;
     flex-direction: column;
-    padding: 7% 0% 0% 7%;
+    padding-left: 8%;
 }
 
   .show-starred-button{
