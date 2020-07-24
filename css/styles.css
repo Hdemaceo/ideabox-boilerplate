@@ -96,7 +96,7 @@ body {
       grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
       grid-gap: 13px;
       padding: 0em 0em 0em 1em;
-      width: 52em;
+      width: 48em;
   }
 
     .nav-view-container{
@@ -216,7 +216,9 @@ body {
     border: 1.5px solid #383861;
     margin: 3%;
     width: 13em;
+    height: 100%;
   }
+  
   .user-controls{
     background-color: #1f1f3c;
     display: flex;
