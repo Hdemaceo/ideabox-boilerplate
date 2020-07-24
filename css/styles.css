@@ -71,11 +71,11 @@ body {
 
 /*=== media queries ===*/
 @media screen and (min-width: 401px) {
-    .ideas {
-      display: grid;
-      grid-template-columns: 20% 40% 40%;
-      grid-template-rows: 20% 80%;
-    }
+  .ideas {
+    display: grid;
+    grid-template-columns: 24vh 50vh 45vh;
+    grid-template-rows: 24vh 27vh 27vh 26vh;
+}
 
     .ideas h3, input, button{
       width: 50%;
