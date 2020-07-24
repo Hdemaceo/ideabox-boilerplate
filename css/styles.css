@@ -71,11 +71,11 @@ body {
 
 /*=== media queries ===*/
 @media screen and (min-width: 401px) {
-    .ideas {
-      display: grid;
-      grid-template-columns: 20% 40% 40%;
-      grid-template-rows: 20% 80%;
-    }
+  .ideas {
+    display: grid;
+    grid-template-columns: 24vh 51vh 45vh;
+    grid-template-rows: 30vh 28vh 27vh 26vh;
+}
 
     .ideas h3, input, button{
       width: 50%;
@@ -85,25 +85,26 @@ body {
     }
 
     .idea-form {
-      grid-area: 1/ 5/ 3/ 2;
-    }
+      grid-area: 1/ 4/ 4/ 2;
+  }
 
     .idea-cards {
-      grid-area: 3/ 5/ 3/ 2;
-        display: grid;
-        grid-auto-flow: row;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
-        grid-gap: 20px;
-        padding: 5em 0em 0em 1em;
-        width: 52em;
-    }
+      grid-area: 3/ 2/ 5/ 3;
+      display: grid;
+      grid-auto-flow: row;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
+      grid-gap: 13px;
+      padding: 0em 0em 0em 1em;
+      width: 48em;
+  }
 
-    .nav-view-container{
+    .nav-view-container {
       height: 70em;
       flex-direction: column;
-      padding: 0%;
-    }
+      padding: 7% 0% 0% 7%;
+  }
+
     .nav-contents{
       padding: 3% 0% 15% 0%;
       border-top: solid 1px;
@@ -216,7 +217,9 @@ body {
     border: 1.5px solid #383861;
     margin: 3%;
     width: 13em;
+    height: 100%;
   }
+
   .user-controls{
     background-color: #1f1f3c;
     display: flex;
@@ -251,7 +254,7 @@ body {
     line-height: 117%;
     margin: 0% 0% 0% 0%;
     background-color: white;
-    padding: 8% 4% 8% 3%;
+        padding: 8% 4% 6% 3%;
     overflow: scroll;
   }
 
@@ -363,11 +366,11 @@ body {
     padding-left: 3%;
   }
 
-  .users-idea{
+  .users-idea {
     border: 1.5px solid #383861;
-    margin: 3%;
-    width: 90%;
-  }
+    margin: 2%;
+    width: 96%;
+}
 
   .user-controls{
     background-color: #1f1f3c;
@@ -412,12 +415,11 @@ body {
     font-weight: 300;
   }
 
-  .nav-view-container{
-    display: flex;
+  .nav-view-container {
+    height: 13em;
     flex-direction: column;
-    padding: 4%;
-
-  }
+    padding-left: 8%;
+}
 
   .show-starred-button{
     border: none;
