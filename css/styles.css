@@ -85,8 +85,8 @@ body {
     }
 
     .idea-form {
-      grid-area: 1/ 5/ 3/ 2;
-    }
+      grid-area: 1/ 4/ 4/ 2;
+  }
 
     .idea-cards {
       grid-area: 3/ 5/ 3/ 2;
