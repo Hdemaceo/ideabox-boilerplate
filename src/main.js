@@ -1,4 +1,5 @@
 // INPUTS:
+var userIdeas = [];
 var titleInput = document.querySelector(".text-input");
 var bodyInput = document.querySelector(".body-input");
 // BUTTONS:
@@ -10,7 +11,7 @@ var closeNavViewButton = document.querySelector(".close-nav-view");
 // var commentButton = document.querySelector(".add-comment")
 
 // EVENT LISTENERS:
-window.onload = disableSaveButton
+
 saveButton.addEventListener("click", createNewIdeaCard)
 
 // FUNCTIONS:
