@@ -95,11 +95,12 @@ function determineIdeaCardEvent(event) {
   var addCommentButton = document.querySelector(".add");
   if(event.target.classList.contains("star")) {
     toggleFavoriteIdeas()
-  } else {
-
+  } if (event.target.classList.contains("close")) {
+    deleteIdeaCard()
+  } if (event.target.classList.contains("add")) {
+    addComment()
   }
 }
+
 function toggleFavoriteIdeas() {
-
-
 }
