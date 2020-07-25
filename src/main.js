@@ -104,3 +104,7 @@ function determineIdeaCardEvent(event) {
 
 function toggleFavoriteIdeas() {
 }
+
+funciton deleteIdeaCard(){
+  
+}
