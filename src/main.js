@@ -23,6 +23,7 @@ function createNewIdeaCard(event) {
   storeCurrentIdea(storedIdea);
   console.log(userIdeas);
   disableSaveButton();
+  clearInputFields();
 }
 
 function instantiateIdea() {
@@ -48,4 +49,8 @@ function enableSaveButton() {
 function disableSaveButton(){
   saveButton.style.opacity = 0.5;
   saveButton.disabled = true;
+}
+function clearInputFields() {
+  titleInput.value = "";
+  bodyInput.innerText = "";
 }
