@@ -41,7 +41,7 @@ function enableSaveButton() {
     saveButton.style.opacity = 1;
     saveButton.disabled = false;
   } else {
-    saveButton.disabled = true;
+    disableSaveButton();
   }
 }
 
