@@ -113,6 +113,14 @@ function deleteIdeaCard(event){
 }
 
 function toggleFavoriteIdeas() {
+  var elementId = parseInt(event.target.id, 10);
+  for(var i = 0; i < userIdeas.length; i++) {
+    if(userIdeas[i].id === elementId) {
+      document.querySelector(".star").src = "assets/star-active.svg";
+    }
+  }
+  
+  displayUserCards();
 
 }
 
