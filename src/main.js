@@ -88,9 +88,18 @@ function displayUserCards() {
         </article>`
   }
 }
-function determineIdeaCardEvent() {
+
+function determineIdeaCardEvent(event) {
   var starButton = document.querySelector(".star");
   var closeButton = document.querySelector(".close");
   var addCommentButton = document.querySelector(".add");
+  if(event.target.classList.contains("star")) {
+    toggleFavoriteIdeas()
+  } else {
+
+  }
+}
+function toggleFavoriteIdeas() {
+
 
 }
