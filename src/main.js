@@ -8,12 +8,14 @@ var searchButton = document.querySelector(".search-img");
 var menuButton = document.querySelector(".open-nav-image");
 var showStarredIdeasButton = document.querySelector(".show-starred-button");
 var closeNavViewButton = document.querySelector(".close-nav-view");
+// CONTAINERS:
+var ideaCardContainer = document.querySelector(".idea-cards");
 // var commentButton = document.querySelector(".add-comment")
 
 // EVENT LISTENERS:
 
 saveButton.addEventListener("click", createNewIdeaCard);
-titleInput.addEventListener("keydown", enableSaveButton);
+// titleInput.addEventListener("keydown", enableSaveButton);
 bodyInput.addEventListener("keydown", enableSaveButton);
 
 // FUNCTIONS:
@@ -21,8 +23,9 @@ function createNewIdeaCard(event) {
   event.preventDefault()
   var storedIdea = instantiateIdea();
   storeCurrentIdea(storedIdea);
-  console.log(userIdeas);
-
+  disableSaveButton();
+  clearInputFields();
+  displayUserCards();
 }
 
 function instantiateIdea() {
@@ -41,9 +44,43 @@ function enableSaveButton() {
     saveButton.style.opacity = 1;
     saveButton.disabled = false;
   } else {
-    saveButton.disabled = true;
+    disableSaveButton();
   }
 }
+
 function disableSaveButton(){
-  
+  saveButton.style.opacity = 0.5;
+  saveButton.disabled = true;
+}
+
+function clearInputFields() {
+  titleInput.value = "";
+  bodyInput.innerText = "";
+}
+
+function displayUserCards() {
+  ideaCardContainer.innerHTML = "";
+  for(var i = 0; i < userIdeas.length; i++) {
+      ideaCardContainer.innerHTML +=
+      `<article class="users-idea" id=${userIdeas[i].id}>
+          <div class="user-controls">
+            <button>
+              <img class="idea-img star" src="assets/star.svg" alt="Star icon">
+            </button>
+            <button>
+              <img class="idea-img close" src="assets/delete.svg" alt="Delete icon">
+            </button>
+          </div>
+          <div class="main-idea">
+            <h4 class="idea-title">${userIdeas[i].title}</h4>
+            <p class="idea-text">${userIdeas[i].body}</p>
+          </div>
+          <div class="add-comment">
+            <button>
+              <img class="idea-img add" src="assets/comment.svg" alt="Comment Icon">
+            </button>
+            <h4 class="comment">Comment</h4>
+          </div>
+        </article>`
+  }
 }
