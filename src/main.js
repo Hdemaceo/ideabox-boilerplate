@@ -88,3 +88,9 @@ function displayUserCards() {
         </article>`
   }
 }
+function determineIdeaCardEvent() {
+  var starButton = document.querySelector(".star");
+  var closeButton = document.querySelector(".close");
+  var addCommentButton = document.querySelector(".add");
+
+}
