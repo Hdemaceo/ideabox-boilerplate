@@ -2,21 +2,25 @@
 var userIdeas = [];
 var titleInput = document.querySelector(".text-input");
 var bodyInput = document.querySelector(".body-input");
+
 // BUTTONS:
 var saveButton = document.querySelector(".save-button");
 var searchButton = document.querySelector(".search-img");
 var menuButton = document.querySelector(".open-nav-image");
 var showStarredIdeasButton = document.querySelector(".show-starred-button");
 var closeNavViewButton = document.querySelector(".close-nav-view");
+
 // CONTAINERS:
 var ideaCardContainer = document.querySelector(".idea-cards");
-// var commentButton = document.querySelector(".add-comment")
+
+// var commentButton = document.querySelector(".add-comment");
 
 // EVENT LISTENERS:
 
 saveButton.addEventListener("click", createNewIdeaCard);
 // titleInput.addEventListener("keydown", enableSaveButton);
 bodyInput.addEventListener("keydown", enableSaveButton);
+ideaCardContainer.addEventListener("click", determineIdeaCardEvent);
 
 // FUNCTIONS:
 function createNewIdeaCard(event) {
