@@ -1,5 +1,3 @@
-// GLOBAL VARIABLES DATA MODEL
-
 class Idea {
   constructor(title, body) {
     this.id = Date.now();
@@ -17,6 +15,6 @@ class Idea {
   }
 
   updateIdea() {
-
+    this.star = !this.star
   }
 }
