@@ -72,7 +72,7 @@ function displayUserCards() {
               <img class="idea-img star" src="assets/star.svg" alt="Star icon">
             </button>
             <button>
-              <img class="idea-img close" src="assets/delete.svg" alt="Delete icon">
+              <img class="idea-img close" id=${userIdeas[i].id} src="assets/delete.svg" alt="Delete icon">
             </button>
           </div>
           <div class="main-idea">
@@ -94,20 +94,29 @@ function determineIdeaCardEvent(event) {
   var closeButton = document.querySelector(".close");
   var addCommentButton = document.querySelector(".add");
   if(event.target.classList.contains("star")) {
-    toggleFavoriteIdeas()
+    toggleFavoriteIdeas(event);
   } if (event.target.classList.contains("close")) {
-    deleteIdeaCard()
+    deleteIdeaCard(event);
   } if (event.target.classList.contains("add")) {
-    addComment()
+    addComment(event);
   }
 }
 
+function deleteIdeaCard(event){
+  var elementId = parseInt(event.target.id, 10);
+  for(var i = 0; i < userIdeas.length; i++) {
+    if(userIdeas[i].id === elementId) {
+      userIdeas.splice(i, 1)
+    }
+  }
+  displayUserCards();
+}
+
 function toggleFavoriteIdeas() {
-}
-
-function deleteIdeaCard(){
 
 }
+
+
 function addComment(){
-  
+
 }
