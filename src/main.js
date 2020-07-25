@@ -105,6 +105,9 @@ function determineIdeaCardEvent(event) {
 function toggleFavoriteIdeas() {
 }
 
-funciton deleteIdeaCard(){
+function deleteIdeaCard(){
+
+}
+function addComment(){
   
 }
