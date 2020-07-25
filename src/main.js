@@ -13,7 +13,7 @@ var closeNavViewButton = document.querySelector(".close-nav-view");
 // EVENT LISTENERS:
 
 saveButton.addEventListener("click", createNewIdeaCard);
-titleInput.addEventListener("keydown", enableSaveButton);
+// titleInput.addEventListener("keydown", enableSaveButton);
 bodyInput.addEventListener("keydown", enableSaveButton);
 
 // FUNCTIONS:
@@ -44,6 +44,9 @@ function enableSaveButton() {
     saveButton.disabled = true;
   }
 }
+
 function disableSaveButton(){
-  
+  saveButton.style.opacity = 0.5;
+
+
 }
