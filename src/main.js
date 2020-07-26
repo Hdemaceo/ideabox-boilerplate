@@ -69,7 +69,7 @@ function displayUserCards() {
       `<article class="users-idea" id=${userIdeas[i].id}>
           <div class="user-controls">
             <button>
-              <img class="idea-img star" src="assets/star.svg" alt="Star icon">
+              <img class="idea-img star" id=${userIdeas[i].id} src="assets/star.svg" alt="Star icon">
             </button>
             <button>
               <img class="idea-img close" id=${userIdeas[i].id} src="assets/delete.svg" alt="Delete icon">
@@ -81,7 +81,7 @@ function displayUserCards() {
           </div>
           <div class="add-comment">
             <button>
-              <img class="idea-img add" src="assets/comment.svg" alt="Comment Icon">
+              <img class="idea-img add" id=${userIdeas[i].id} src="assets/comment.svg" alt="Comment Icon">
             </button>
             <h4 class="comment">Comment</h4>
           </div>
@@ -112,19 +112,17 @@ function deleteIdeaCard(event){
   displayUserCards();
 }
 
-function toggleFavoriteIdeas() {
+function toggleFavoriteIdeas(event){
   var elementId = parseInt(event.target.id, 10);
   for(var i = 0; i < userIdeas.length; i++) {
     if(userIdeas[i].id === elementId) {
       document.querySelector(".star").src = "assets/star-active.svg";
     }
   }
-  
   displayUserCards();
-
 }
 
 
-function addComment(){
+function addComment(event){
 
 }
