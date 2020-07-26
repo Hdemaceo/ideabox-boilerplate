@@ -4,6 +4,7 @@ class Idea {
     this.title = title;
     this.body = body;
     this.star = false;
+    this.src = "assets/star.svg";
   }
 
   saveToStorage() {
@@ -16,5 +17,6 @@ class Idea {
 
   updateIdea() {
     this.star = !this.star
+    this.star ? this.src = "assets/star-active.svg" : this.src = "assets/star.svg"
   }
 }

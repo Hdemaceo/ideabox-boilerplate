@@ -2,21 +2,25 @@
 var userIdeas = [];
 var titleInput = document.querySelector(".text-input");
 var bodyInput = document.querySelector(".body-input");
+
 // BUTTONS:
 var saveButton = document.querySelector(".save-button");
 var searchButton = document.querySelector(".search-img");
 var menuButton = document.querySelector(".open-nav-image");
 var showStarredIdeasButton = document.querySelector(".show-starred-button");
 var closeNavViewButton = document.querySelector(".close-nav-view");
+
 // CONTAINERS:
 var ideaCardContainer = document.querySelector(".idea-cards");
-// var commentButton = document.querySelector(".add-comment")
+
+// var commentButton = document.querySelector(".add-comment");
 
 // EVENT LISTENERS:
 
 saveButton.addEventListener("click", createNewIdeaCard);
 // titleInput.addEventListener("keydown", enableSaveButton);
 bodyInput.addEventListener("keydown", enableSaveButton);
+ideaCardContainer.addEventListener("click", determineIdeaCardEvent);
 
 // FUNCTIONS:
 function createNewIdeaCard(event) {
@@ -65,10 +69,10 @@ function displayUserCards() {
       `<article class="users-idea" id=${userIdeas[i].id}>
           <div class="user-controls">
             <button>
-              <img class="idea-img star" src="assets/star.svg" alt="Star icon">
+              <img class="idea-img star" id=${userIdeas[i].id} src=${userIdeas[i].src} alt="Star icon">
             </button>
             <button>
-              <img class="idea-img close" src="assets/delete.svg" alt="Delete icon">
+              <img class="idea-img close" id=${userIdeas[i].id} src="assets/delete.svg" alt="Delete icon">
             </button>
           </div>
           <div class="main-idea">
@@ -77,10 +81,47 @@ function displayUserCards() {
           </div>
           <div class="add-comment">
             <button>
-              <img class="idea-img add" src="assets/comment.svg" alt="Comment Icon">
+              <img class="idea-img add" id=${userIdeas[i].id} src="assets/comment.svg" alt="Comment Icon">
             </button>
             <h4 class="comment">Comment</h4>
           </div>
         </article>`
   }
+}
+
+function determineIdeaCardEvent(event) {
+  var starButton = document.querySelector(".star");
+  var closeButton = document.querySelector(".close");
+  var addCommentButton = document.querySelector(".add");
+  if(event.target.classList.contains("star")) {
+    toggleFavoriteIdeas(event);
+  } if (event.target.classList.contains("close")) {
+    deleteIdeaCard(event);
+  } if (event.target.classList.contains("add")) {
+    addComment(event);
+  }
+}
+
+function deleteIdeaCard(event){
+  var elementId = parseInt(event.target.id, 10);
+  for(var i = 0; i < userIdeas.length; i++) {
+    if(userIdeas[i].id === elementId) {
+      userIdeas.splice(i, 1)
+    }
+  }
+  displayUserCards();
+}
+
+function toggleFavoriteIdeas(event){
+  var elementId = parseInt(event.target.id, 10);
+  for(var i = 0; i < userIdeas.length; i++) {
+    if(userIdeas[i].id === elementId) {
+      userIdeas[i].updateIdea();
+    }
+  }
+  displayUserCards();
+}
+
+
+function addComment(event){
 }
