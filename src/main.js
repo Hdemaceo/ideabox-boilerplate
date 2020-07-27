@@ -36,6 +36,7 @@ function instantiateIdea() {
   var userTitle = titleInput.value
   var userBody = bodyInput.innerText
   var currentIdea = new Idea(userTitle, userBody)
+  currentIdea.saveToStorage()
   return currentIdea;
 }
 
