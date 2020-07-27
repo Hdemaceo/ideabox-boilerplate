@@ -8,7 +8,7 @@ class Idea {
   }
 
   saveToStorage() {
-     localStorage.setItem(this.id, JSON.stringify(this));
+     localStorage.setItem("storedInformation", JSON.stringify(userIdeas));
 
    }
 

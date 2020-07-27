@@ -26,6 +26,9 @@ window.addEventListener("load", getStoredIdeas);
 // FUNCTIONS:
 function getStoredIdeas() {
 
+  // When the page loads, userIdeas are displayed.
+  // Retrieve the userIdeas from localstorage
+  // display localstorage data in idea class section
 }
 
 
@@ -42,12 +45,12 @@ function instantiateIdea() {
   var userTitle = titleInput.value
   var userBody = bodyInput.innerText
   var currentIdea = new Idea(userTitle, userBody)
-  currentIdea.saveToStorage()
   return currentIdea;
 }
 
 function storeCurrentIdea(storedIdea) {
   userIdeas.unshift(storedIdea);
+  storedIdea.saveToStorage();
 }
 
 function enableSaveButton() {
