@@ -21,8 +21,14 @@ saveButton.addEventListener("click", createNewIdeaCard);
 // titleInput.addEventListener("keydown", enableSaveButton);
 bodyInput.addEventListener("keydown", enableSaveButton);
 ideaCardContainer.addEventListener("click", determineIdeaCardEvent);
+window.addEventListener("load", getStoredIdeas);
 
 // FUNCTIONS:
+function getStoredIdeas() {
+
+}
+
+
 function createNewIdeaCard(event) {
   event.preventDefault()
   var storedIdea = instantiateIdea();
