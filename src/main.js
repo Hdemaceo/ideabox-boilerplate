@@ -27,12 +27,18 @@ window.addEventListener("load", getStoredIdeas);
 // FUNCTIONS:
 
 function showStarredIdeas() {
+  toggleButtonName()
   //change the name of the button and will aonly display the starred ideas
 
 }
 
 function toggleButtonName() {
-  showStarredIdeasButton.innerText = ''
+  console.log(showStarredIdeasButton.innerText)
+    if (showStarredIdeasButton.innerText === "Show Starred Ideas"){
+    showStarredIdeasButton.innerText = "Show All Ideas"
+  } else if (showStarredIdeasButton.innerText === "Show All Ideas"){
+    showStarredIdeasButton.innerText = "Show Starred Ideas"
+  }
 }
 
 function getStoredIdeas() {
