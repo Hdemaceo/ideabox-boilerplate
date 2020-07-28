@@ -98,9 +98,6 @@ function displayUserCards() {
 }
 
 function determineIdeaCardEvent(event) {
-  var starButton = document.querySelector(".star");
-  var closeButton = document.querySelector(".close");
-  var addCommentButton = document.querySelector(".add");
   if(event.target.classList.contains("star")) {
     toggleFavoriteIdeas(event);
   } if (event.target.classList.contains("close")) {
