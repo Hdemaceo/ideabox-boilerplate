@@ -31,10 +31,12 @@ Our learning goals are to learn more about responsive layouts, familiarize ourse
 
 7/25: Divide and conquered in groups of two. Started with Orlando and Kristi pseudocoding through favoriting and deleting ideas by means of updating the data model and the DOM, running into an issue/bug with toggling the star image. Kristi and Demaceo worked together for the rest of the day translating the psuedocode into written code. Added determineIdeaCardEvent function that invokes toggleFavoriteIdeas, deleteIdeaCard, and addComment functions respectively. Interpolated new information into displayUserCards to update the DOM. Fixed bug within the toggleFavoriteIdeas function. Iteration 3 complete.
 
-7/26: Orlando did some independent work on the media queries in our styles.css file to get a more responsive design after we realized that our design was currently not responding the way we wanted it to. We decide need to revisit the media queries again at a later date.
+7/26: Orlando did some independent work on the media queries in our styles.css file to get a more responsive design after we realized that our design was currently not responding the way we wanted it to. We decide to revisit the media queries again at a later date.
 
-7/27:
+7/27: Begin work on storing idea cards locally. Added functionality to the saveToStorage method in our Idea class. Added invocation of saveToStorage method to instantiateIdea function. Added getStoredIdeas function with functionality to retrieve information from local storage. Add invocation of updateIdea method to toggleFavoriteIdeas.
+
 7/28:
+
 7/29: Project due at 9pm.
 
 ## Showcase ::
