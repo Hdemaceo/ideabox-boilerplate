@@ -25,7 +25,12 @@ window.addEventListener("load", getStoredIdeas);
 
 // FUNCTIONS:
 function getStoredIdeas() {
-  userIdeas = JSON.parse(localStorage.getItem("storedInformation")) || [];
+  var retrievedInformation = JSON.parse(localStorage.getItem("storedInformation")) || [];
+    for (var i = 0; i < retrievedInformation.length; i++){
+      var reinstantiatedIdeas = new Idea(retrievedInformation[i].id, retrievedInformation[i].title, retrievedInformation[i].body, retrievedInformation[i].star, retrievedInformation[i].src)
+      userIdeas.push(reinstantiatedIdeas )
+      console.log(userIdeas)
+    }
   displayUserCards();
 }
 
