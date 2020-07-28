@@ -35,7 +35,7 @@ Our learning goals are to learn more about responsive layouts, familiarize ourse
 
 7/27: Begin work on storing idea cards locally. Added functionality to the saveToStorage method in our Idea class. Added invocation of saveToStorage method to instantiateIdea function. Added getStoredIdeas function with functionality to retrieve information from local storage. Add invocation of updateIdea method to toggleFavoriteIdeas.
 
-7/28:
+7/28: Discovered a bug in our received data from local storage. Determined that received data was no longer instantiated through the Idea class. Created functionality in getStoredIdeas function to reinstantiate retrieved information. Added an eventListener and respective functionality to the toggleButtonName function for the starred ideas button's text to change on 'click'. Discovered bug - Deleted cards are still being stored in local storage.
 
 7/29: Project due at 9pm.
 
