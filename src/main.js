@@ -25,7 +25,7 @@ window.addEventListener("load", getStoredIdeas);
 
 // FUNCTIONS:
 function getStoredIdeas() {
-  userIdeas = JSON.parse(localStorage.getItem("storedInformation") || []);
+  userIdeas = JSON.parse(localStorage.getItem("storedInformation")) || [];
   displayUserCards();
 }
 
@@ -125,7 +125,7 @@ function toggleFavoriteIdeas(event){
   var elementId = parseInt(event.target.id, 10);
   for(var i = 0; i < userIdeas.length; i++) {
     if(userIdeas[i].id === elementId) {
-      // userIdeas[i].updateIdea();
+      userIdeas[i].updateIdea();
     }
     displayUserCards();
   }
