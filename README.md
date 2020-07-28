@@ -21,8 +21,10 @@ Our learning goals are to learn more about responsive layouts, familiarize ourse
 
 
 ## Progression
-7/21: Completed DTR, made GitHub repository, and independent familiaration with rubric.
-7/22:
+7/21: Completed DTR, made GitHub repository, and independent familiarization with rubric.
+
+7/22: Created basic HTML architecture according to provided comp. Began work on the styles.css file with driver-navigator approach. Decided as a team that divide-and-conquer would be a better approach for working with css. Assigned each team member to a portion of the css, and worked individually while on a video call together in case of questions.
+
 7/23:
 7/24:
 7/25:
