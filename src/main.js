@@ -27,7 +27,7 @@ window.addEventListener("load", getStoredIdeas);
 function getStoredIdeas() {
   var retrievedInformation = JSON.parse(localStorage.getItem("storedInformation")) || [];
     for (var i = 0; i < retrievedInformation.length; i++){
-      var reinstantiatedIdeas = new Idea(retrievedInformation[i].id, retrievedInformation[i].title, retrievedInformation[i].body, retrievedInformation[i].star, retrievedInformation[i].src)
+      var reinstantiatedIdeas = new Idea(retrievedInformation[i].title, retrievedInformation[i].body, retrievedInformation[i].id, retrievedInformation[i].star, retrievedInformation[i].src)
       userIdeas.push(reinstantiatedIdeas )
       console.log(userIdeas)
     }
@@ -41,6 +41,7 @@ function createNewIdeaCard(event) {
   disableSaveButton();
   clearInputFields();
   displayUserCards();
+  console.log(userIdeas)
 }
 
 function instantiateIdea() {
@@ -128,6 +129,7 @@ function toggleFavoriteIdeas(event){
   for(var i = 0; i < userIdeas.length; i++) {
     if(userIdeas[i].id === elementId) {
       userIdeas[i].updateIdea();
+      userIdeas.saveToStorage();
     }
     displayUserCards();
   }
