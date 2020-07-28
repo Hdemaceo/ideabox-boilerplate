@@ -25,7 +25,8 @@ Our learning goals are to learn more about responsive layouts, familiarize ourse
 
 7/22: Created basic HTML architecture according to provided comp. Began work on the styles.css file with driver-navigator approach. Decided as a team that divide-and-conquer would be a better approach for working with css. Assigned each team member to a portion of the css, and worked individually while on a video call together in case of questions.
 
-7/23:
+7/23: Began work on the main.js and idea.js files. Created the Idea class and methods (incomplete) to later add functionality to. Created querySelector variables for buttons and main inputs. Added userIdeas as a global variable. Added eventListeners on the saveButton to invoke the saveUserInput function. Created storeCurrentIdea function to add functionality to later. Created disableSaveButton function and found a bug. Decided to return the next day for debugging.
+
 7/24:
 7/25:
 7/26:
