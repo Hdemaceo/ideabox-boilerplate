@@ -29,7 +29,8 @@ Our learning goals are to learn more about responsive layouts, familiarize ourse
 
 7/24: Refactor createNewIdeaCard to include event.preventDefault, and  instantiateIdea function. Rename SaveUserInput function to instantiateIdea and refactor to return currentIdea (now a local variable). Added bodyInput and titleInput eventListeners in order to toggle disable and enable on the save button. Refactor enableSaveButton function, added opacity change to button when disabled. Created disableSaveButton function. Added functionality to updateIdea method in Idea.js. Added querySelector to ideaCardContainer. Fixed disableSaveButton bug. Created clearInputFields, and displayUserCards functions. Iteration 2 complete.
 
-7/25: 
+7/25: Divide and conquered in groups of two. Started with Orlando and Kristi pseudocoding through favoriting and deleting ideas by means of updating the data model and the DOM, running into an issue/bug with toggling the star image. Kristi and Demaceo worked together for the rest of the day translating the psuedocode into written code. Added determineIdeaCardEvent function that invokes toggleFavoriteIdeas, deleteIdeaCard, and addComment functions respectively. Interpolated new information into displayUserCards to update the DOM. Fixed bug within the toggleFavoriteIdeas function.
+
 7/26:
 7/27:
 7/28:
