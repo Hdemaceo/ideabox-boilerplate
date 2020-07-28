@@ -1,10 +1,10 @@
 class Idea {
-  constructor(title, body) {
-    this.id = Date.now();
+  constructor( title, body, id, star, src) {
     this.title = title;
     this.body = body;
-    this.star = false;
-    this.src = "assets/star.svg";
+    this.id = id || Date.now() ;
+    this.star = star || false ;
+    this.src =  src || "assets/star.svg";
   }
 
   saveToStorage() {
@@ -13,7 +13,15 @@ class Idea {
    }
 
   deleteFromStorage() {
-   localStorage.removeItem(this.id);
+    getStoredIdeas()
+    var elementId = parseInt(event.target.id, 10);
+    for (var i = 0; i < userIdeas.length; i++){
+      if (userIdeas[i].id === elementId){
+        userIdeas.splice(i, 1)
+        this.saveToStorage()
+      }  
+    }
+    // localStorage.removeItem("storedInformation");
  }
 
   updateIdea() {
