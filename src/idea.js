@@ -8,12 +8,13 @@ class Idea {
   }
 
   saveToStorage() {
+     localStorage.setItem("storedInformation", JSON.stringify(userIdeas));
 
-  }
+   }
 
   deleteFromStorage() {
-
-  }
+   localStorage.removeItem(this.id);
+ }
 
   updateIdea() {
     this.star = !this.star

@@ -21,8 +21,14 @@ saveButton.addEventListener("click", createNewIdeaCard);
 // titleInput.addEventListener("keydown", enableSaveButton);
 bodyInput.addEventListener("keydown", enableSaveButton);
 ideaCardContainer.addEventListener("click", determineIdeaCardEvent);
+window.addEventListener("load", getStoredIdeas);
 
 // FUNCTIONS:
+function getStoredIdeas() {
+  userIdeas = JSON.parse(localStorage.getItem("storedInformation") || []);
+  displayUserCards();
+}
+
 function createNewIdeaCard(event) {
   event.preventDefault()
   var storedIdea = instantiateIdea();
@@ -41,6 +47,8 @@ function instantiateIdea() {
 
 function storeCurrentIdea(storedIdea) {
   userIdeas.unshift(storedIdea);
+  storedIdea.saveToStorage();
+  // console.log(localStorage.storedInformation.length);
 }
 
 function enableSaveButton() {
@@ -106,6 +114,7 @@ function deleteIdeaCard(event){
   var elementId = parseInt(event.target.id, 10);
   for(var i = 0; i < userIdeas.length; i++) {
     if(userIdeas[i].id === elementId) {
+      userIdeas[i].deleteFromStorage()
       userIdeas.splice(i, 1)
     }
   }
@@ -116,10 +125,10 @@ function toggleFavoriteIdeas(event){
   var elementId = parseInt(event.target.id, 10);
   for(var i = 0; i < userIdeas.length; i++) {
     if(userIdeas[i].id === elementId) {
-      userIdeas[i].updateIdea();
+      // userIdeas[i].updateIdea();
     }
+    displayUserCards();
   }
-  displayUserCards();
 }
 
 
