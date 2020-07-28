@@ -129,8 +129,9 @@ function toggleFavoriteIdeas(event){
   for(var i = 0; i < userIdeas.length; i++) {
     if(userIdeas[i].id === elementId) {
       userIdeas[i].updateIdea();
-      userIdeas.saveToStorage();
+      userIdeas[i].saveToStorage();
     }
+
     displayUserCards();
   }
 }

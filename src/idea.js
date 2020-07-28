@@ -4,7 +4,7 @@ class Idea {
     this.body = body;
     this.id = id || Date.now() ;
     this.star = star || false ;
-    this.src = "assets/star.svg" || src;
+    this.src =  src || "assets/star.svg";
   }
 
   saveToStorage() {
