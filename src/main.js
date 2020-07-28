@@ -119,6 +119,7 @@ function deleteIdeaCard(event){
     if(userIdeas[i].id === elementId) {
       userIdeas[i].deleteFromStorage()
       userIdeas.splice(i, 1)
+      userIdeas[i].saveToStorage();
     }
   }
   displayUserCards();
@@ -131,7 +132,6 @@ function toggleFavoriteIdeas(event){
       userIdeas[i].updateIdea();
       userIdeas[i].saveToStorage();
     }
-
     displayUserCards();
   }
 }
