@@ -25,14 +25,9 @@ window.addEventListener("load", getStoredIdeas);
 
 // FUNCTIONS:
 function getStoredIdeas() {
-  // localStorage.getItem(userIdeas);
-  var userInfo = JSON.parse(localStorage.getItem("storedInformation") || []);
-  userIdeas = userInfo;
+  userIdeas = JSON.parse(localStorage.getItem("storedInformation") || []);
   displayUserCards();
 }
-  // When the page loads, userIdeas are displayed.
-  // Retrieve the userIdeas from localstorage
-  // display localstorage data in idea class section
 
 function createNewIdeaCard(event) {
   event.preventDefault()
@@ -119,6 +114,7 @@ function deleteIdeaCard(event){
   var elementId = parseInt(event.target.id, 10);
   for(var i = 0; i < userIdeas.length; i++) {
     if(userIdeas[i].id === elementId) {
+      userIdeas[i].deleteFromStorage()
       userIdeas.splice(i, 1)
     }
   }
@@ -129,10 +125,10 @@ function toggleFavoriteIdeas(event){
   var elementId = parseInt(event.target.id, 10);
   for(var i = 0; i < userIdeas.length; i++) {
     if(userIdeas[i].id === elementId) {
-      userIdeas[i].updateIdea();
+      // userIdeas[i].updateIdea();
     }
+    displayUserCards();
   }
-  displayUserCards();
 }
 
 

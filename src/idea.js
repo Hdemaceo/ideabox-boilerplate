@@ -13,8 +13,8 @@ class Idea {
    }
 
   deleteFromStorage() {
-
-  }
+   localStorage.removeItem(this.id);
+ }
 
   updateIdea() {
     this.star = !this.star
