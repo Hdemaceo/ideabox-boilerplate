@@ -46,9 +46,9 @@ function getStoredIdeas() {
     for (var i = 0; i < retrievedInformation.length; i++){
       var reinstantiatedIdeas = new Idea(retrievedInformation[i].title, retrievedInformation[i].body, retrievedInformation[i].id, retrievedInformation[i].star, retrievedInformation[i].src)
       userIdeas.push(reinstantiatedIdeas )
-      console.log(userIdeas)
+      displayUserCards();
     }
-  displayUserCards();
+    return userIdeas//=> we are returning the update userIdeas that has been reintantiated local storage
 }
 
 function createNewIdeaCard(event) {
@@ -58,7 +58,7 @@ function createNewIdeaCard(event) {
   disableSaveButton();
   clearInputFields();
   displayUserCards();
-  console.log(userIdeas)
+  // console.log(userIdeas)
 }
 
 function instantiateIdea() {
@@ -134,12 +134,11 @@ function deleteIdeaCard(event){
   var elementId = parseInt(event.target.id, 10);
   for(var i = 0; i < userIdeas.length; i++) {
     if(userIdeas[i].id === elementId) {
+      // userIdeas[i].saveToStorage();
       userIdeas[i].deleteFromStorage()
-      userIdeas.splice(i, 1)
-      userIdeas[i].saveToStorage();
-    }
+      userIdeas.splice(i, 1);
+    } 
   }
-  displayUserCards();
 }
 
 function toggleFavoriteIdeas(event){
