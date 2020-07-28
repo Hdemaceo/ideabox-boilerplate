@@ -17,6 +17,7 @@ var ideaCardContainer = document.querySelector(".idea-cards");
 
 // EVENT LISTENERS:
 
+showStarredIdeasButton.addEventListener('click', showStarredIdeas)
 saveButton.addEventListener("click", createNewIdeaCard);
 // titleInput.addEventListener("keydown", enableSaveButton);
 bodyInput.addEventListener("keydown", enableSaveButton);
@@ -24,6 +25,16 @@ ideaCardContainer.addEventListener("click", determineIdeaCardEvent);
 window.addEventListener("load", getStoredIdeas);
 
 // FUNCTIONS:
+
+function showStarredIdeas() {
+  //change the name of the button and will aonly display the starred ideas
+
+}
+
+function toggleButtonName() {
+  showStarredIdeasButton.innerText = ''
+}
+
 function getStoredIdeas() {
   var retrievedInformation = JSON.parse(localStorage.getItem("storedInformation")) || [];
     for (var i = 0; i < retrievedInformation.length; i++){
