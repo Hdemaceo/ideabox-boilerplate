@@ -28,10 +28,11 @@ window.addEventListener("load", onload);
 // FUNCTIONS:
 function findIdeas(event) {
   var foundIdeas = [];
-  var inputByUser = event.target.value
-  console.log (event.target.value)
+  var inputByUser = event.target.value.toLowerCase()
   for (var i = 0; i < userIdeas.length; i++){
-    if (userIdeas[i].title.includes(inputByUser) || userIdeas[i].body.includes(inputByUser)){
+    var lowerCaseTitle = userIdeas[i].title.toLowerCase();
+    var lowerCaseBody = userIdeas[i].body.toLowerCase();
+    if (lowerCaseTitle.includes(inputByUser) || lowerCaseBody.includes(inputByUser)){
       foundIdeas.push(userIdeas[i])
       displayUserCards(foundIdeas)
     }
