@@ -25,6 +25,7 @@ bodyInput.addEventListener("keydown", enableSaveButton);
 ideaCardContainer.addEventListener("click", determineIdeaCardEvent);
 window.addEventListener("load", onload);
 
+
 // FUNCTIONS:
 function findIdeas(event) {
   var foundIdeas = [];
@@ -46,6 +47,7 @@ function findIdeas(event) {
 function onload() {
   getStoredIdeas();
   displayUserCards(userIdeas);
+  disableSaveButton();
 }
 
 function showStarredIdeas() {
@@ -121,6 +123,7 @@ function enableSaveButton() {
 }
 
 function disableSaveButton(){
+  saveButton.style.cursor = "none";
   saveButton.style.opacity = 0.5;
   saveButton.disabled = true;
 }
@@ -188,5 +191,3 @@ function toggleFavoriteIdeas(event){
     displayUserCards(userIdeas);
   }
 }
-
-
