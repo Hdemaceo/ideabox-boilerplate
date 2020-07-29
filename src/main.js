@@ -2,6 +2,7 @@
 var userIdeas = [];
 var titleInput = document.querySelector(".text-input");
 var bodyInput = document.querySelector(".body-input");
+var search = document.querySelector(".search-input")
 
 // BUTTONS:
 var saveButton = document.querySelector(".save-button");
@@ -16,7 +17,7 @@ var ideaCardContainer = document.querySelector(".idea-cards");
 // var commentButton = document.querySelector(".add-comment");
 
 // EVENT LISTENERS:
-
+search.addEventListener("input", findIdeas)
 showStarredIdeasButton.addEventListener('click', showStarredIdeas)
 saveButton.addEventListener("click", createNewIdeaCard);
 // titleInput.addEventListener("keydown", enableSaveButton);
@@ -25,6 +26,22 @@ ideaCardContainer.addEventListener("click", determineIdeaCardEvent);
 window.addEventListener("load", onload);
 
 // FUNCTIONS:
+function findIdeas(event) {
+  var foundIdeas = [];
+  var inputByUser = event.target.value.toLowerCase()
+  for (var i = 0; i < userIdeas.length; i++){
+    var lowerCaseTitle = userIdeas[i].title.toLowerCase();
+    var lowerCaseBody = userIdeas[i].body.toLowerCase();
+    if (lowerCaseTitle.includes(inputByUser) || lowerCaseBody.includes(inputByUser)){
+      foundIdeas.push(userIdeas[i])
+      displayUserCards(foundIdeas)
+    }
+    if (foundIdeas.length === 0){
+      displayUserCards(userIdeas)
+    }
+  }
+}
+
 
 function onload() {
   getStoredIdeas();
@@ -34,8 +51,6 @@ function onload() {
 function showStarredIdeas() {
   toggleButtonName()
   showButtonHandler()
-  //change the name of the button and will aonly display the starred ideas
-
 }
 
 function showButtonHandler() {
@@ -72,7 +87,7 @@ function getStoredIdeas() {
       userIdeas.push(reinstantiatedIdeas )
       displayUserCards(userIdeas);
     }
-    return userIdeas//=> we are returning the update userIdeas that has been reintantiated local storage
+    return userIdeas
 }
 
 function createNewIdeaCard(event) {
@@ -82,7 +97,6 @@ function createNewIdeaCard(event) {
   disableSaveButton();
   clearInputFields();
   displayUserCards(userIdeas);
-  // console.log(userIdeas)
 }
 
 function instantiateIdea() {
@@ -95,7 +109,6 @@ function instantiateIdea() {
 function storeCurrentIdea(storedIdea) {
   userIdeas.unshift(storedIdea);
   storedIdea.saveToStorage();
-  // console.log(localStorage.storedInformation.length);
 }
 
 function enableSaveButton() {
@@ -160,10 +173,7 @@ function deleteIdeaCard(event){
     if(userIdeas[i].id === elementId) {
       userIdeas[i].deleteFromStorage()
       userIdeas.splice(i, 1);
-      // userIdeas.length === 0 ? localStorage.clear() : userIdeas[i].deleteFromStorage()
-      //remove the index from the array
     }
-    // userIdeas[i].saveToStorage();
   }
   displayUserCards(userIdeas)
 }
@@ -180,5 +190,3 @@ function toggleFavoriteIdeas(event){
 }
 
 
-function addComment(event){
-}

@@ -12,8 +12,7 @@ class Idea {
 
    }
   deleteFromStorage() {
-    // localStorage.clear();
-    // this.saveToStorage();
+
     var localStorageIdeas = JSON.parse(localStorage.getItem("storedInformation"));
     for (var i = 0; i < localStorageIdeas.length; i++){
       if (localStorageIdeas[i].id === this.id) {
