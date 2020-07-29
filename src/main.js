@@ -134,8 +134,9 @@ function deleteIdeaCard(event){
   var elementId = parseInt(event.target.id, 10);
   for(var i = 0; i < userIdeas.length; i++) {
     if(userIdeas[i].id === elementId) {
+      userIdeas[i].deleteFromStorage()
       userIdeas.splice(i, 1);
-      userIdeas.length === 0 ? localStorage.clear() : userIdeas[i].deleteFromStorage()
+      // userIdeas.length === 0 ? localStorage.clear() : userIdeas[i].deleteFromStorage()
       //remove the index from the array
     }
     // userIdeas[i].saveToStorage();

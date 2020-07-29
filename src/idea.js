@@ -11,19 +11,16 @@ class Idea {
      localStorage.setItem("storedInformation", JSON.stringify(userIdeas));
 
    }
-
   deleteFromStorage() {
-    localStorage.clear();
-    this.saveToStorage();
-    // getStoredIdeas()
-    // var elementId = parseInt(event.target.id, 10);
-    // for (var i = 0; i < userIdeas.length; i++){
-    //   if (userIdeas[i].id === elementId){
-    //     userIdeas.splice(i, 1)
-    //     this.saveToStorage()
-    //   }
-    // }
-    // localStorage.removeItem("storedInformation");
+    // localStorage.clear();
+    // this.saveToStorage();
+    var localStorageIdeas = JSON.parse(localStorage.getItem("storedInformation"));
+    for (var i = 0; i < localStorageIdeas.length; i++){
+      if (localStorageIdeas[i].id === this.id) {
+        localStorageIdeas.splice(i, 1);
+      }
+    }
+    localStorage.setIten("storedInformation", JSON.stringify(localStorageIdeas))
  }
 
   updateIdea() {
