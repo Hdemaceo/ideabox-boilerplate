@@ -38,9 +38,16 @@ function findIdeas(event) {
   var inputByUser = event.target.value
   console.log (event.target.value)
   for (var i = 0; i < userIdeas.length; i++){
-    
+    if (userIdeas[i].title.includes(inputByUser) || userIdeas[i].body.includes(inputByUser)){
+      foundIdeas.push(userIdeas[i])
+      displayUserCards(foundIdeas)
+    }
+    if (foundIdeas.length === 0){
+      displayUserCards(userIdeas)
+    }
   }
 }
+
 
 function onload() {
   getStoredIdeas();
