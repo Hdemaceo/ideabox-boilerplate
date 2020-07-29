@@ -28,7 +28,7 @@ window.addEventListener("load", onload);
 
 function onload() {
   getStoredIdeas();
-  displayUserCards();
+  displayUserCards(userIdeas);
 }
 
 function showStarredIdeas() {
@@ -113,26 +113,26 @@ function clearInputFields() {
   bodyInput.innerText = "";
 }
 
-function displayUserCards(array) {
+function displayUserCards(ideasArray) {
   ideaCardContainer.innerHTML = "";
-  for(var i = 0; i < userIdeas.length; i++) {
+  for(var i = 0; i < ideasArray.length; i++) {
       ideaCardContainer.innerHTML +=
-      `<article class="users-idea" id=${userIdeas[i].id}>
+      `<article class="users-idea" id=${ideasArray[i].id}>
           <div class="user-controls">
             <button>
-              <img class="idea-img star" id=${userIdeas[i].id} src=${userIdeas[i].src} alt="Star icon">
+              <img class="idea-img star" id=${ideasArray[i].id} src=${ideasArray[i].src} alt="Star icon">
             </button>
             <button>
-              <img class="idea-img close" id=${userIdeas[i].id} src="assets/delete.svg" alt="Delete icon">
+              <img class="idea-img close" id=${ideasArray[i].id} src="assets/delete.svg" alt="Delete icon">
             </button>
           </div>
           <div class="main-idea">
-            <h4 class="idea-title">${userIdeas[i].title}</h4>
-            <p class="idea-text">${userIdeas[i].body}</p>
+            <h4 class="idea-title">${ideasArray[i].title}</h4>
+            <p class="idea-text">${ideasArray[i].body}</p>
           </div>
           <div class="add-comment">
             <button>
-              <img class="idea-img add" id=${userIdeas[i].id} src="assets/comment.svg" alt="Comment Icon">
+              <img class="idea-img add" id=${ideasArray[i].id} src="assets/comment.svg" alt="Comment Icon">
             </button>
             <h4 class="comment">Comment</h4>
           </div>
