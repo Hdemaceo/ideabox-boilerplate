@@ -134,10 +134,11 @@ function deleteIdeaCard(event){
   var elementId = parseInt(event.target.id, 10);
   for(var i = 0; i < userIdeas.length; i++) {
     if(userIdeas[i].id === elementId) {
-      // userIdeas[i].saveToStorage();
-      userIdeas[i].deleteFromStorage()
       userIdeas.splice(i, 1);
-    } 
+      userIdeas[i].deleteFromStorage()
+      //remove the index from the array
+    }
+    // userIdeas[i].saveToStorage();
   }
 }
 
