@@ -39,7 +39,11 @@ function showStarredIdeas() {
 }
 
 function showButtonHandler() {
-
+  if(showStarredIdeasButton.innerText === "Show All Ideas") {
+    showStarredIdeasOnly();
+  } else {
+    displayUserCards(userIdeas);
+  }
 }
 
 function showStarredIdeasOnly() {
