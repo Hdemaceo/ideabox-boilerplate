@@ -14,7 +14,7 @@ class Idea {
 
   deleteFromStorage() {
     localStorage.clear();
-    
+    this.saveToStorage();
     // getStoredIdeas()
     // var elementId = parseInt(event.target.id, 10);
     // for (var i = 0; i < userIdeas.length; i++){
