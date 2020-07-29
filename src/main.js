@@ -77,7 +77,7 @@ function createNewIdeaCard(event) {
   storeCurrentIdea(storedIdea);
   disableSaveButton();
   clearInputFields();
-  displayUserCards();
+  displayUserCards(userIdeas);
   // console.log(userIdeas)
 }
 
@@ -113,7 +113,7 @@ function clearInputFields() {
   bodyInput.innerText = "";
 }
 
-function displayUserCards() {
+function displayUserCards(array) {
   ideaCardContainer.innerHTML = "";
   for(var i = 0; i < userIdeas.length; i++) {
       ideaCardContainer.innerHTML +=
@@ -161,7 +161,7 @@ function deleteIdeaCard(event){
     }
     // userIdeas[i].saveToStorage();
   }
-  displayUserCards()
+  displayUserCards(userIdeas)
 }
 
 function toggleFavoriteIdeas(event){
@@ -171,7 +171,7 @@ function toggleFavoriteIdeas(event){
       userIdeas[i].updateIdea();
       userIdeas[i].saveToStorage();
     }
-    displayUserCards();
+    displayUserCards(userIdeas);
   }
 }
 
