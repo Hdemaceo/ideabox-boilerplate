@@ -83,7 +83,7 @@ function toggleButtonName() {
 }
 
 function getStoredIdeas() {
-  var retrievedInformation = JSON.parse(localStorage.getItem("storedInformation")) || [];
+  var retrievedInformation = JSON.parse(localStorage.getItem("storedUserIdeas")) || [];
     for (var i = 0; i < retrievedInformation.length; i++){
       var reinstantiatedIdeas = new Idea(retrievedInformation[i].title, retrievedInformation[i].body, retrievedInformation[i].id, retrievedInformation[i].star, retrievedInformation[i].src)
       userIdeas.push(reinstantiatedIdeas )

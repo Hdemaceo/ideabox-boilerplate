@@ -166,22 +166,22 @@ html, body, h1, h2, h3, h4, h5, h6, p {
     margin: 2%;
     width: 96%;
 }
-  .user-controls{
+  .user-controls {
     background-color: #1f1f3c;
     display: flex;
     justify-content: space-between;
   }
-  .idea-img, .close-menu-img{
+  .idea-img, .close-menu-img {
     height: 30px;
   }
-  .add-comment{
+  .add-comment {
     align-items: center;
     color: #ffffff;
     background-color: #5356A4;
     display: flex;
     justify-content: flex-start;
   }
-  .idea-cards button{
+  .idea-cards button {
     background: transparent;
     border: none;
     height: 41px;
@@ -189,17 +189,17 @@ html, body, h1, h2, h3, h4, h5, h6, p {
     padding: 0;
     width: 14%;
   }
-  .main-idea{
+  .main-idea {
     font-size: 1em;
     letter-spacing: 1px;
     line-height: 117%;
     margin: 5% 4% 5% 4%;
   }
-  .idea-title{
+  .idea-title {
     font-weight: 600;
     padding-bottom: 5%;
   }
-  .idea-text{
+  .idea-text {
     font-weight: 300;
   }
   /* .nav-view-container {
@@ -280,16 +280,16 @@ html, body, h1, h2, h3, h4, h5, h6, p {
       padding: 2%;
       width: 68vh;
     }
-    .top-nav-bar{
+    .top-nav-bar {
       display: flex;
       flex-direction: column-reverse;
     }
-    .nav-contents{
+    .nav-contents {
       padding-right: 8%;
       border-bottom: solid 1px;
       border-color: #353567;
     }
-    .show-starred-button{
+    .show-starred-button {
       border: none;
       background-color: #5356a4;
       color: #ffffff;
@@ -298,16 +298,16 @@ html, body, h1, h2, h3, h4, h5, h6, p {
       padding: 4%;
       margin: 3%;
     }
-    .nav-contents{
+    .nav-contents {
       display: flex;
     }
-    .nav-view-header{
+    .nav-view-header {
       align-self: center;
       color: #ffffff;
       font-size: 1.0em;
       padding: 0% 0% 5% 1%;
     }
-    .nav-view-subheader{
+    .nav-view-subheader {
       color: #a9aad2;
     padding: 1% 0% 1% 0%;
     font-size: 19px;
@@ -324,19 +324,19 @@ html, body, h1, h2, h3, h4, h5, h6, p {
       align-items: center;
       width: 70vh;
     }
-    .title, .body-title{
+    .title, .body-title {
       font-size: 1.1em;
       font-weight: 650;
       padding: 1% 0% 0% 0%;
       margin: 1% 2% .5% 0%;
     }
-    .text-input{
+    .text-input {
       border-radius: 3px;
       font-size: 1.5em;
       border: 1.5px solid #4b4b80;
       padding: 1%;
     }
-    .body-input{
+    .body-input {
       background-color: white;
       border: 1.5px solid #4b4b80;
       border-radius: 3px;
@@ -348,10 +348,10 @@ html, body, h1, h2, h3, h4, h5, h6, p {
       padding: 1% 1% 10% 1%;
       width: 50%;
     }
-    .open-nav-image, .close-nav-view{
+    .open-nav-image, .close-nav-view {
       height: 45px;
     }
-    .save-button{
+    .save-button {
       background-color:  #383861;
       border: none;
       border-radius: 2px;
@@ -361,12 +361,12 @@ html, body, h1, h2, h3, h4, h5, h6, p {
       font-size: 1.5em;
       opacity: 0.5;
     }
-    .search-bar{
+    .search-bar {
       display: grid;
       grid-template-columns: 12% 90%;
       padding-left: 0%;
     }
-    .search-img{
+    .search-img {
       height: 27px;
       background-color: #4b4b80;
       padding: 9px;
@@ -380,13 +380,13 @@ html, body, h1, h2, h3, h4, h5, h6, p {
     padding-left: 2%;
     width: 318px;
   }
-  .users-idea{
+  .users-idea {
     border: 1.5px solid #383861;
     margin: 3%;
     width: 13em;
     height: 100%;
   }
-  .user-controls{
+  .user-controls {
     background-color: #1f1f3c;
     display: flex;
     justify-content: space-between;
@@ -484,14 +484,14 @@ html, body, h1, h2, h3, h4, h5, h6, p {
       flex-direction: column;
       padding: 7% 0% 0% 7%;
   }
-    .nav-contents{
+    .nav-contents {
       padding: 3% 0% 15% 0%;
       border-top: solid 1px;
       border-bottom: solid 1px;
       border-color: #353567;
       border: 100%;
     }
-    .show-starred-button{
+    .show-starred-button {
       border: none;
       background-color: #5356a4;
       color: #ffffff;
@@ -501,13 +501,13 @@ html, body, h1, h2, h3, h4, h5, h6, p {
       padding: 4%;
       width: 95%;
     }
-    .nav-view-header{
+    .nav-view-header {
       align-self: center;
       color: #ffffff;
       font-size: 1.0em;
       padding: 0% 0% 5% 1%;
     }
-    .nav-view-subheader{
+    .nav-view-subheader {
       color: #a9aad2;
       padding: 5% 0% 10% 0%;
       font-size: 12px;
@@ -528,19 +528,19 @@ html, body, h1, h2, h3, h4, h5, h6, p {
       align-items: center;
       width: 100vh;
   }
-    .title, .body-title{
+    .title, .body-title {
       font-size: 1.1em;
       font-weight: 650;
       padding: 1% 0% 0% 0%;
       margin: 1% 2% .5% 0%;
     }
-    .text-input{
+    .text-input {
       border-radius: 3px;
       font-size: 1.5em;
       border: 1.5px solid #4b4b80;
       padding: 1%;
     }
-    .body-input{
+    .body-input {
       background-color: white;
       border: 1.5px solid #4b4b80;
       border-radius: 3px;
@@ -552,10 +552,10 @@ html, body, h1, h2, h3, h4, h5, h6, p {
       padding: 1% 1% 10% 1%;
       width: 50%;
     }
-    .open-nav-image, .close-nav-view{
+    .open-nav-image, .close-nav-view {
       height: 45px;
     }
-    .save-button{
+    .save-button {
       background-color:  #383861;
       border: none;
       border-radius: 2px;
@@ -565,12 +565,12 @@ html, body, h1, h2, h3, h4, h5, h6, p {
       font-size: 1.5em;
       opacity: 0.5;
     }
-    .search-bar{
+    .search-bar {
       display: grid;
       grid-template-columns: 12% 90%;
       padding-left: 0%;
     }
-    .search-img{
+    .search-img {
       height: 27px;
       background-color: #4b4b80;
       padding: 9px;
@@ -598,7 +598,7 @@ html, body, h1, h2, h3, h4, h5, h6, p {
     height: 30px;
     align-items: center;
   }
-  .idea-img, .close-menu-img{
+  .idea-img, .close-menu-img {
     height: 25px;
   }
   .add-comment {
