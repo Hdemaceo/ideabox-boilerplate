@@ -33,8 +33,23 @@ function onload() {
 
 function showStarredIdeas() {
   toggleButtonName()
+  showButtonHandler()
   //change the name of the button and will aonly display the starred ideas
 
+}
+
+function showButtonHandler() {
+
+}
+
+function showStarredIdeasOnly() {
+  var starredCards = []
+  for(var i = 0; i < userIdeas.length; i++) {
+    if(userIdeas[i].star) {
+      starredCards.push(userIdeas[i])
+      displayUserCards(starredCards)
+    }
+  }
 }
 
 function toggleButtonName() {

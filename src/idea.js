@@ -20,7 +20,7 @@ class Idea {
         localStorageIdeas.splice(i, 1);
       }
     }
-    localStorage.setIten("storedInformation", JSON.stringify(localStorageIdeas))
+    localStorage.setItem("storedInformation", JSON.stringify(localStorageIdeas))
  }
 
   updateIdea() {
