@@ -22,14 +22,38 @@ saveButton.addEventListener("click", createNewIdeaCard);
 // titleInput.addEventListener("keydown", enableSaveButton);
 bodyInput.addEventListener("keydown", enableSaveButton);
 ideaCardContainer.addEventListener("click", determineIdeaCardEvent);
-window.addEventListener("load", getStoredIdeas);
+window.addEventListener("load", onload);
 
 // FUNCTIONS:
 
+function onload() {
+  getStoredIdeas();
+  displayUserCards(userIdeas);
+}
+
 function showStarredIdeas() {
   toggleButtonName()
+  showButtonHandler()
   //change the name of the button and will aonly display the starred ideas
 
+}
+
+function showButtonHandler() {
+  if(showStarredIdeasButton.innerText === "Show All Ideas") {
+    showStarredIdeasOnly();
+  } else {
+    displayUserCards(userIdeas);
+  }
+}
+
+function showStarredIdeasOnly() {
+  var starredCards = []
+  for(var i = 0; i < userIdeas.length; i++) {
+    if(userIdeas[i].star) {
+      starredCards.push(userIdeas[i])
+      displayUserCards(starredCards)
+    }
+  }
 }
 
 function toggleButtonName() {
@@ -46,7 +70,7 @@ function getStoredIdeas() {
     for (var i = 0; i < retrievedInformation.length; i++){
       var reinstantiatedIdeas = new Idea(retrievedInformation[i].title, retrievedInformation[i].body, retrievedInformation[i].id, retrievedInformation[i].star, retrievedInformation[i].src)
       userIdeas.push(reinstantiatedIdeas )
-      displayUserCards();
+      displayUserCards(userIdeas);
     }
     return userIdeas//=> we are returning the update userIdeas that has been reintantiated local storage
 }
@@ -57,7 +81,7 @@ function createNewIdeaCard(event) {
   storeCurrentIdea(storedIdea);
   disableSaveButton();
   clearInputFields();
-  displayUserCards();
+  displayUserCards(userIdeas);
   // console.log(userIdeas)
 }
 
@@ -93,26 +117,26 @@ function clearInputFields() {
   bodyInput.innerText = "";
 }
 
-function displayUserCards() {
+function displayUserCards(ideasArray) {
   ideaCardContainer.innerHTML = "";
-  for(var i = 0; i < userIdeas.length; i++) {
+  for(var i = 0; i < ideasArray.length; i++) {
       ideaCardContainer.innerHTML +=
-      `<article class="users-idea" id=${userIdeas[i].id}>
+      `<article class="users-idea" id=${ideasArray[i].id}>
           <div class="user-controls">
             <button>
-              <img class="idea-img star" id=${userIdeas[i].id} src=${userIdeas[i].src} alt="Star icon">
+              <img class="idea-img star" id=${ideasArray[i].id} src=${ideasArray[i].src} alt="Star icon">
             </button>
             <button>
-              <img class="idea-img close" id=${userIdeas[i].id} src="assets/delete.svg" alt="Delete icon">
+              <img class="idea-img close" id=${ideasArray[i].id} src="assets/delete.svg" alt="Delete icon">
             </button>
           </div>
           <div class="main-idea">
-            <h4 class="idea-title">${userIdeas[i].title}</h4>
-            <p class="idea-text">${userIdeas[i].body}</p>
+            <h4 class="idea-title">${ideasArray[i].title}</h4>
+            <p class="idea-text">${ideasArray[i].body}</p>
           </div>
           <div class="add-comment">
             <button>
-              <img class="idea-img add" id=${userIdeas[i].id} src="assets/comment.svg" alt="Comment Icon">
+              <img class="idea-img add" id=${ideasArray[i].id} src="assets/comment.svg" alt="Comment Icon">
             </button>
             <h4 class="comment">Comment</h4>
           </div>
@@ -134,11 +158,14 @@ function deleteIdeaCard(event){
   var elementId = parseInt(event.target.id, 10);
   for(var i = 0; i < userIdeas.length; i++) {
     if(userIdeas[i].id === elementId) {
-      // userIdeas[i].saveToStorage();
       userIdeas[i].deleteFromStorage()
       userIdeas.splice(i, 1);
-    } 
+      // userIdeas.length === 0 ? localStorage.clear() : userIdeas[i].deleteFromStorage()
+      //remove the index from the array
+    }
+    // userIdeas[i].saveToStorage();
   }
+  displayUserCards(userIdeas)
 }
 
 function toggleFavoriteIdeas(event){
@@ -148,7 +175,7 @@ function toggleFavoriteIdeas(event){
       userIdeas[i].updateIdea();
       userIdeas[i].saveToStorage();
     }
-    displayUserCards();
+    displayUserCards(userIdeas);
   }
 }
 

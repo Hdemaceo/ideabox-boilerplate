@@ -11,17 +11,16 @@ class Idea {
      localStorage.setItem("storedInformation", JSON.stringify(userIdeas));
 
    }
-
   deleteFromStorage() {
-    getStoredIdeas()
-    var elementId = parseInt(event.target.id, 10);
-    for (var i = 0; i < userIdeas.length; i++){
-      if (userIdeas[i].id === elementId){
-        userIdeas.splice(i, 1)
-        this.saveToStorage()
-      }  
+    // localStorage.clear();
+    // this.saveToStorage();
+    var localStorageIdeas = JSON.parse(localStorage.getItem("storedInformation"));
+    for (var i = 0; i < localStorageIdeas.length; i++){
+      if (localStorageIdeas[i].id === this.id) {
+        localStorageIdeas.splice(i, 1);
+      }
     }
-    // localStorage.removeItem("storedInformation");
+    localStorage.setItem("storedInformation", JSON.stringify(localStorageIdeas))
  }
 
   updateIdea() {

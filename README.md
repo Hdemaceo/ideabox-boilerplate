@@ -21,14 +21,22 @@ Our learning goals are to learn more about responsive layouts, familiarize ourse
 
 
 ## Progression
-7/21: Completed DTR, made GitHub repository, and independent familiaration with rubric.
-7/22:
-7/23:
-7/24:
-7/25:
-7/26:
-7/27:
-7/28:
+7/21: Completed DTR, made GitHub repository, and independent familiarization with rubric.
+
+7/22: Created basic HTML architecture according to provided comp. Began work on the styles.css file with driver-navigator approach. Decided as a team that divide-and-conquer would be a better approach for working with css. Assigned each team member to a portion of the css, and worked individually while on a video call together in case of questions. Iteration 0-1 complete.
+
+7/23: Began work on the main.js and idea.js files. Created the Idea class and methods (incomplete) to later add functionality to. Created querySelector variables for buttons and main inputs. Added userIdeas and currentIdea as global variables. Added eventListeners on the saveButton to invoke the saveUserInput function. Created storeCurrentIdea function to add functionality to later. Created disableSaveButton function and found a bug. Decided to return the next day for debugging.
+
+7/24: Refactor createNewIdeaCard to include event.preventDefault, and  instantiateIdea function. Rename SaveUserInput function to instantiateIdea and refactor to return currentIdea (now a local variable). Added bodyInput and titleInput eventListeners in order to toggle disable and enable on the save button. Refactor enableSaveButton function, added opacity change to button when disabled. Created disableSaveButton function. Added functionality to updateIdea method in Idea.js. Added querySelector to ideaCardContainer. Fixed disableSaveButton bug. Created clearInputFields, and displayUserCards functions. Iteration 2 complete.
+
+7/25: Divide and conquered in groups of two. Started with Orlando and Kristi pseudocoding through favoriting and deleting ideas by means of updating the data model and the DOM, running into an issue/bug with toggling the star image. Kristi and Demaceo worked together for the rest of the day translating the psuedocode into written code. Added determineIdeaCardEvent function that invokes toggleFavoriteIdeas, deleteIdeaCard, and addComment functions respectively. Interpolated new information into displayUserCards to update the DOM. Fixed bug within the toggleFavoriteIdeas function. Iteration 3 complete.
+
+7/26: Orlando did some independent work on the media queries in our styles.css file to get a more responsive design after we realized that our design was currently not responding the way we wanted it to. We decide to revisit the media queries again at a later date.
+
+7/27: Begin work on storing idea cards locally. Added functionality to the saveToStorage method in our Idea class. Added invocation of saveToStorage method to instantiateIdea function. Added getStoredIdeas function with functionality to retrieve information from local storage. Add invocation of updateIdea method to toggleFavoriteIdeas.
+
+7/28: Discovered a bug in our received data from local storage. Determined that received data was no longer instantiated through the Idea class. Created functionality in getStoredIdeas function to reinstantiate retrieved information. Added an eventListener and respective functionality to the toggleButtonName function for the starred ideas button's text to change on 'click'. Discovered bug - Deleted cards are still being stored in local storage.
+
 7/29: Project due at 9pm.
 
 ## Showcase ::
