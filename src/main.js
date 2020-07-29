@@ -22,9 +22,14 @@ saveButton.addEventListener("click", createNewIdeaCard);
 // titleInput.addEventListener("keydown", enableSaveButton);
 bodyInput.addEventListener("keydown", enableSaveButton);
 ideaCardContainer.addEventListener("click", determineIdeaCardEvent);
-window.addEventListener("load", getStoredIdeas);
+window.addEventListener("load", onload);
 
 // FUNCTIONS:
+
+function onload() {
+  getStoredIdeas();
+  displayUserCards();
+}
 
 function showStarredIdeas() {
   toggleButtonName()
