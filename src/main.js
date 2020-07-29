@@ -23,7 +23,7 @@ saveButton.addEventListener("click", createNewIdeaCard);
 // titleInput.addEventListener("keydown", enableSaveButton);
 bodyInput.addEventListener("keydown", enableSaveButton);
 ideaCardContainer.addEventListener("click", determineIdeaCardEvent);
-window.addEventListener("load", onload);
+window.addEventListener("load", onLoad);
 
 
 // FUNCTIONS:
@@ -44,7 +44,7 @@ function findIdeas(event) {
 }
 
 
-function onload() {
+function onLoad() {
   getStoredIdeas();
   displayUserCards(userIdeas);
   disableSaveButton();
