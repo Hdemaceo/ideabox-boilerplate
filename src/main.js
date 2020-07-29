@@ -2,6 +2,7 @@
 var userIdeas = [];
 var titleInput = document.querySelector(".text-input");
 var bodyInput = document.querySelector(".body-input");
+var search = document.querySelector(".search-input")
 
 // BUTTONS:
 var saveButton = document.querySelector(".save-button");
@@ -16,6 +17,7 @@ var ideaCardContainer = document.querySelector(".idea-cards");
 // var commentButton = document.querySelector(".add-comment");
 
 // EVENT LISTENERS:
+search.addEventListener("input", findIdeas)
 showStarredIdeasButton.addEventListener('click', showStarredIdeas)
 saveButton.addEventListener("click", createNewIdeaCard);
 // titleInput.addEventListener("keydown", enableSaveButton);
@@ -24,6 +26,22 @@ ideaCardContainer.addEventListener("click", determineIdeaCardEvent);
 window.addEventListener("load", onload);
 
 // FUNCTIONS:
+/*
+get that query selectos
+create a function that can listen to the keys that haven been pressed in the search bar
+create a function that returns an array with the elements that matches with the search criteria
+display the elements that are added to the array
+*/
+
+function findIdeas(event) {
+  var foundIdeas = [];
+  var inputByUser = event.target.value
+  console.log (event.target.value)
+  for (var i = 0; i < userIdeas.length; i++){
+    
+  }
+}
+
 function onload() {
   getStoredIdeas();
   displayUserCards(userIdeas);
