@@ -26,13 +26,6 @@ ideaCardContainer.addEventListener("click", determineIdeaCardEvent);
 window.addEventListener("load", onload);
 
 // FUNCTIONS:
-/*
-get that query selectos
-create a function that can listen to the keys that haven been pressed in the search bar
-create a function that returns an array with the elements that matches with the search criteria
-display the elements that are added to the array
-*/
-
 function findIdeas(event) {
   var foundIdeas = [];
   var inputByUser = event.target.value
