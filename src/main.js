@@ -16,7 +16,6 @@ var ideaCardContainer = document.querySelector(".idea-cards");
 // var commentButton = document.querySelector(".add-comment");
 
 // EVENT LISTENERS:
-
 showStarredIdeasButton.addEventListener('click', showStarredIdeas)
 saveButton.addEventListener("click", createNewIdeaCard);
 // titleInput.addEventListener("keydown", enableSaveButton);
@@ -25,7 +24,6 @@ ideaCardContainer.addEventListener("click", determineIdeaCardEvent);
 window.addEventListener("load", onload);
 
 // FUNCTIONS:
-
 function onload() {
   getStoredIdeas();
   displayUserCards(userIdeas);
@@ -34,8 +32,6 @@ function onload() {
 function showStarredIdeas() {
   toggleButtonName()
   showButtonHandler()
-  //change the name of the button and will aonly display the starred ideas
-
 }
 
 function showButtonHandler() {
@@ -72,7 +68,7 @@ function getStoredIdeas() {
       userIdeas.push(reinstantiatedIdeas )
       displayUserCards(userIdeas);
     }
-    return userIdeas//=> we are returning the update userIdeas that has been reintantiated local storage
+    return userIdeas
 }
 
 function createNewIdeaCard(event) {
@@ -82,7 +78,6 @@ function createNewIdeaCard(event) {
   disableSaveButton();
   clearInputFields();
   displayUserCards(userIdeas);
-  // console.log(userIdeas)
 }
 
 function instantiateIdea() {
@@ -95,7 +90,6 @@ function instantiateIdea() {
 function storeCurrentIdea(storedIdea) {
   userIdeas.unshift(storedIdea);
   storedIdea.saveToStorage();
-  // console.log(localStorage.storedInformation.length);
 }
 
 function enableSaveButton() {
@@ -160,10 +154,7 @@ function deleteIdeaCard(event){
     if(userIdeas[i].id === elementId) {
       userIdeas[i].deleteFromStorage()
       userIdeas.splice(i, 1);
-      // userIdeas.length === 0 ? localStorage.clear() : userIdeas[i].deleteFromStorage()
-      //remove the index from the array
     }
-    // userIdeas[i].saveToStorage();
   }
   displayUserCards(userIdeas)
 }
@@ -180,5 +171,3 @@ function toggleFavoriteIdeas(event){
 }
 
 
-function addComment(event){
-}
