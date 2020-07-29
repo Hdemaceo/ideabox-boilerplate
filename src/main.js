@@ -70,7 +70,7 @@ function getStoredIdeas() {
     for (var i = 0; i < retrievedInformation.length; i++){
       var reinstantiatedIdeas = new Idea(retrievedInformation[i].title, retrievedInformation[i].body, retrievedInformation[i].id, retrievedInformation[i].star, retrievedInformation[i].src)
       userIdeas.push(reinstantiatedIdeas )
-      displayUserCards();
+      displayUserCards(userIdeas);
     }
     return userIdeas//=> we are returning the update userIdeas that has been reintantiated local storage
 }
