@@ -13,14 +13,16 @@ class Idea {
    }
 
   deleteFromStorage() {
-    getStoredIdeas()
-    var elementId = parseInt(event.target.id, 10);
-    for (var i = 0; i < userIdeas.length; i++){
-      if (userIdeas[i].id === elementId){
-        userIdeas.splice(i, 1)
-        this.saveToStorage()
-      }  
-    }
+    localStorage.clear();
+    
+    // getStoredIdeas()
+    // var elementId = parseInt(event.target.id, 10);
+    // for (var i = 0; i < userIdeas.length; i++){
+    //   if (userIdeas[i].id === elementId){
+    //     userIdeas.splice(i, 1)
+    //     this.saveToStorage()
+    //   }
+    // }
     // localStorage.removeItem("storedInformation");
  }
 
