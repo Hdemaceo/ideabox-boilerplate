@@ -140,6 +140,7 @@ function deleteIdeaCard(event){
     }
     // userIdeas[i].saveToStorage();
   }
+  displayUserCards()
 }
 
 function toggleFavoriteIdeas(event){
