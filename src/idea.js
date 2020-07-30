@@ -8,20 +8,19 @@ class Idea {
   }
 
   saveToStorage() {
-     localStorage.setItem("storedInformation", JSON.stringify(userIdeas));
-
+     localStorage.setItem("storedUserIdeas", JSON.stringify(userIdeas));
    }
-  deleteFromStorage() {
 
-    var localStorageIdeas = JSON.parse(localStorage.getItem("storedInformation"));
+  deleteFromStorage() {
+    var localStorageIdeas = JSON.parse(localStorage.getItem("storedUserIdeas"));
     for (var i = 0; i < localStorageIdeas.length; i++){
       if (localStorageIdeas[i].id === this.id) {
         localStorageIdeas.splice(i, 1);
       }
     }
-    localStorage.setItem("storedInformation", JSON.stringify(localStorageIdeas))
+    localStorage.setItem("storedUserIdeas", JSON.stringify(localStorageIdeas))
  }
-
+ 
   updateIdea() {
     this.star = !this.star
     this.star ? this.src = "assets/star-active.svg" : this.src = "assets/star.svg"

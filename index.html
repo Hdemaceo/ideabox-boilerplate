@@ -13,13 +13,11 @@
       <img class="open-nav-image" src="assets/menu.svg" alt="Menu Icon">
       <h1 class="header-text">IdeaBox</h1>
     </nav>
-
     <main class="ideas">
       <form class="idea-form purple-2">
         <h3 class="title">Title</h3>
         <input class="text-input" type="text">
         <h3 class="body-title">Body</h3>
-        <!-- <input class="body-input" type="text"> -->
         <span class="body-input" type="text" contenteditable="true"></span>
         <button class="save-button" disabled>Save</button>
         <div class="search-bar">
@@ -27,39 +25,19 @@
           <input src="" class="search-input" type="text" placeholder="Search ideas">
         </div>
       </form>
-
       <section class="idea-cards">
-        <article class="users-idea">
-          <div class="user-controls">
-            <button><img class="idea-img star" src="assets/star.svg" alt="Star icon"></button>
-            <button><img class="idea-img close" src="assets/delete.svg" alt="Delete icon"></button>
-          </div>
-          <div class="main-idea">
-            <h4 class="idea-title">Idea title</h4>
-            <p class="idea-text">Idea body. Don’t ever play yourself. every chance I get I water the plants, Lion! Cloth talk!</p>
-          </div>
-          <div class="add-comment">
-            <button><img class="idea-img add" src="assets/comment.svg" alt="Comment Icon"></button>
-            <h4 class="comment">Comment</h4>
-          </div>
-        </article>
       </section>
-
-
       <section class="search-view">
         <nav class="nav-view-container purple-4">
-
           <div class="top-nav-bar">
             <img class="close-nav-view" src="assets/delete.svg" alt="Delete Icon">
             <h1 class="nav-view-header">IdeaBox</h1>
-
           </div>
           <div class="nav-contents">
             <h4 class="nav-view-subheader">Filter Starred Ideas</h4>
             <button class="show-starred-button">Show Starred Ideas</button>
           </div>
         </nav>
-
       </section>
     </main>
     <script src="src/idea.js"></script>
