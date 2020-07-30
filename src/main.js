@@ -14,13 +14,11 @@ var closeNavViewButton = document.querySelector(".close-nav-view");
 // CONTAINERS:
 var ideaCardContainer = document.querySelector(".idea-cards");
 
-// var commentButton = document.querySelector(".add-comment");
-
 // EVENT LISTENERS:
-search.addEventListener("input", findIdeas)
-showStarredIdeasButton.addEventListener('click', showStarredIdeas)
+search.addEventListener("input", findIdeas);
+showStarredIdeasButton.addEventListener('click', showStarredIdeas);
 saveButton.addEventListener("click", createNewIdeaCard);
-// titleInput.addEventListener("keydown", enableSaveButton);
+titleInput.addEventListener("keydown", enableSaveButton);
 bodyInput.addEventListener("keydown", enableSaveButton);
 ideaCardContainer.addEventListener("click", determineIdeaCardEvent);
 window.addEventListener("load", onLoad);
@@ -29,7 +27,7 @@ window.addEventListener("load", onLoad);
 // FUNCTIONS:
 function findIdeas(event) {
   var foundIdeas = [];
-  var inputByUser = event.target.value.toLowerCase()
+  var inputByUser = event.target.value.toLowerCase();
   for (var i = 0; i < userIdeas.length; i++){
     var lowerCaseTitle = userIdeas[i].title.toLowerCase();
     var lowerCaseBody = userIdeas[i].body.toLowerCase();
@@ -38,11 +36,10 @@ function findIdeas(event) {
       displayUserCards(foundIdeas)
     }
     if (foundIdeas.length === 0){
-      displayUserCards(userIdeas)
+      ideaCardContainer.innerHTML = ""
     }
   }
 }
-
 
 function onLoad() {
   getStoredIdeas();
@@ -51,12 +48,13 @@ function onLoad() {
 }
 
 function showStarredIdeas() {
-  toggleButtonName()
-  showButtonHandler()
+    showButtonHandler()
+    toggleButtonName()
+
 }
 
 function showButtonHandler() {
-  if(showStarredIdeasButton.innerText === "Show All Ideas") {
+  if(showStarredIdeasButton.innerText === "Show Starred Ideas") {
     showStarredIdeasOnly();
   } else {
     displayUserCards(userIdeas);
@@ -65,8 +63,8 @@ function showButtonHandler() {
 
 function showStarredIdeasOnly() {
   var starredCards = []
-  for(var i = 0; i < userIdeas.length; i++) {
-    if(userIdeas[i].star) {
+  for (var i = 0; i < userIdeas.length; i++) {
+    if (userIdeas[i].star) {
       starredCards.push(userIdeas[i])
       displayUserCards(starredCards)
     }
@@ -76,9 +74,10 @@ function showStarredIdeasOnly() {
 function toggleButtonName() {
   console.log(showStarredIdeasButton.innerText)
     if (showStarredIdeasButton.innerText === "Show Starred Ideas"){
-    showStarredIdeasButton.innerText = "Show All Ideas"
+      showStarredIdeasButton.innerText = "Show All Ideas"
+      console.log(showStarredIdeasButton.innerText)
   } else if (showStarredIdeasButton.innerText === "Show All Ideas"){
-    showStarredIdeasButton.innerText = "Show Starred Ideas"
+      showStarredIdeasButton.innerText = "Show Starred Ideas"
   }
 }
 
@@ -89,11 +88,10 @@ function getStoredIdeas() {
       userIdeas.push(reinstantiatedIdeas )
       displayUserCards(userIdeas);
     }
-    return userIdeas
 }
 
 function createNewIdeaCard(event) {
-  event.preventDefault()
+  event.preventDefault();
   var storedIdea = instantiateIdea();
   storeCurrentIdea(storedIdea);
   disableSaveButton();
@@ -102,9 +100,9 @@ function createNewIdeaCard(event) {
 }
 
 function instantiateIdea() {
-  var userTitle = titleInput.value
-  var userBody = bodyInput.innerText
-  var currentIdea = new Idea(userTitle, userBody)
+  var userTitle = titleInput.value;
+  var userBody = bodyInput.innerText;
+  var currentIdea = new Idea(userTitle, userBody);
   return currentIdea;
 }
 
@@ -114,12 +112,12 @@ function storeCurrentIdea(storedIdea) {
 }
 
 function enableSaveButton() {
-  if(titleInput.length !== 0 && bodyInput.length !== 0) {
-    saveButton.style.opacity = 1;
-    saveButton.disabled = false;
-    saveButton.style.cursor = "pointer";
+  if (titleInput.length !== 0 && bodyInput.length !== 0) {
+      saveButton.style.opacity = 1;
+      saveButton.disabled = false;
+      saveButton.style.cursor = "pointer";
   } else {
-    disableSaveButton();
+      disableSaveButton();
   }
 }
 
@@ -136,7 +134,7 @@ function clearInputFields() {
 
 function displayUserCards(ideasArray) {
   ideaCardContainer.innerHTML = "";
-  for(var i = 0; i < ideasArray.length; i++) {
+  for  (var i = 0; i < ideasArray.length; i++) {
       ideaCardContainer.innerHTML +=
       `<article class="users-idea" id=${ideasArray[i].id}>
           <div class="user-controls">
@@ -162,33 +160,35 @@ function displayUserCards(ideasArray) {
 }
 
 function determineIdeaCardEvent(event) {
-  if(event.target.classList.contains("star")) {
+  if (event.target.classList.contains("star")) {
     toggleFavoriteIdeas(event);
-  } if (event.target.classList.contains("close")) {
+  }
+  if (event.target.classList.contains("close")) {
     deleteIdeaCard(event);
-  } if (event.target.classList.contains("add")) {
+  }
+  if (event.target.classList.contains("add")) {
     addComment(event);
   }
 }
 
 function deleteIdeaCard(event){
   var elementId = parseInt(event.target.id, 10);
-  for(var i = 0; i < userIdeas.length; i++) {
+  for (var i = 0; i < userIdeas.length; i++) {
     if(userIdeas[i].id === elementId) {
       userIdeas[i].deleteFromStorage()
-      userIdeas.splice(i, 1);
+      userIdeas.splice(i, 1)
     }
   }
-  displayUserCards(userIdeas)
+  displayUserCards(userIdeas);
 }
 
 function toggleFavoriteIdeas(event){
   var elementId = parseInt(event.target.id, 10);
-  for(var i = 0; i < userIdeas.length; i++) {
-    if(userIdeas[i].id === elementId) {
-      userIdeas[i].updateIdea();
-      userIdeas[i].saveToStorage();
+  for (var i = 0; i < userIdeas.length; i++) {
+    if (userIdeas[i].id === elementId) {
+      userIdeas[i].updateIdea()
+      userIdeas[i].saveToStorage()
     }
-    displayUserCards(userIdeas);
   }
+  displayUserCards(userIdeas);
 }
