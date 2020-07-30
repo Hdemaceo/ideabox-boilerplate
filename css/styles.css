@@ -298,7 +298,7 @@ body {
       grid-template-columns: repeat(3, 221px);
       grid-template-rows: repeat(4, 205px);
       grid-gap: 25px;
-      padding: 1em;
+      padding: 3% 3% 5% 3%;
       width: 43rem;
   }
   .nav-menu {
@@ -364,7 +364,7 @@ body {
       flex-direction: column;
       flex-grow: 2;
       height: 400px;
-      padding: 2% 0% 4% 0%;
+      padding: 2% 0% 1% 0%;
       align-items: center;
       width: 75vh;
     }
@@ -495,8 +495,8 @@ body {
     width: 1050px;
   } */
   .ideas {
-    display: grid;
-    grid-template-columns: 0vh 63vh;
+    /* display: grid;
+    grid-template-columns: 0vh 63vh; */
     grid-template-rows: 50vh 40vh;
 }
   /* .ideas {
@@ -523,12 +523,13 @@ body {
       grid-area: 2/ 2/ 5/ 4;
       display: grid;
       grid-auto-flow: row;
-      grid-template-columns: repeat(4, 221px);
+      grid-template-columns: repeat(3, 221px);
       grid-template-rows: repeat(4, 205px);
       grid-gap: 10px;
-      padding: 2em;
+      padding: 2em 2em 2em 26em;
       width: 43rem;
   }
+
     .nav-menu {
       width: 100vh;
       display: flex;
@@ -583,7 +584,7 @@ body {
     .nav-view-container {
       height: 61em;
       flex-direction: column;
-      padding: 7%;
+      padding: 3% 0% 0% 5%;
       width: 16vh;
       position: fixed;
   }
@@ -598,7 +599,7 @@ body {
       flex-direction: column;
       /* flex-grow: 2; */
       /* height: 59%; */
-      padding: 2% 0% 1% 56%;
+      padding: 2% 0% 1% 22%;
       align-items: center;
       width: 100vh;
   }
@@ -727,8 +728,8 @@ body {
 
 @media screen and (min-width: 1050px){
   .ideas {
-    display: grid;
-    grid-template-columns: 0vh 0vh;
+    /* display: grid;
+    grid-template-columns: 0vh 0vh; */
     grid-template-rows: 50vh 50vh;
 }
 
@@ -743,7 +744,7 @@ body {
     /* grid-area: 1/ 1/ 1/ 1; */
     /* height: 103%; */
     flex-direction: column;
-    padding: 5%;
+    padding: 3% 0% 0% 3%;
 }
   .idea-form {
     grid-area: 1/ 2/ 1/ 2;
@@ -751,7 +752,7 @@ body {
     flex-direction: column;
     align-items: center;
     /* height: 59%; */
-    padding: 7% 0% 1% 0%;
+    padding: 2% 0% 1% 22%;
     align-items: center;
     width: 100vh;
   }
