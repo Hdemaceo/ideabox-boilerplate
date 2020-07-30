@@ -4,6 +4,10 @@
 - [Orlando Murcio](https://github.com/Atos20)
 - [Demaceo Howard](https://github.com/Hdemaceo)
 
+### Project Manager ::
+- [Scott Ertmer](https://github.com/sertmer)
+
+
 ### Project Links ::
 - [Repo](https://github.com/Hdemaceo/ideabox-boilerplate)
 - [Deployed Page](https://hdemaceo.github.io/ideabox-boilerplate/)
@@ -37,20 +41,27 @@ Our learning goals are to learn more about responsive layouts, familiarize ourse
 
 7/28: Discovered a bug in our received data from local storage. Determined that received data was no longer instantiated through the Idea class. Created functionality in getStoredIdeas function to reinstantiate retrieved information. Added an eventListener and respective functionality to the toggleButtonName function for the starred ideas button's text to change on 'click'. Discovered bug - Deleted cards are still being stored in local storage.
 
-7/29: Project due at 9pm.
+7/29: Updated README with showcase videos/images. Fixed existing bug with saving to local storage. Discovered issues with GitHub Master/Main branch change. Added functionality to the "Show Favorite Ideas"/"Show All Ideas" button. Gave dynamic abilities to the displayUserIdeas function by adding a parameter. Received and implemented mentor feedback on the km-local-storage-and-filtering branch. Created functionality for the search bar that displays cards according to the search input value. Refactored and addressed remaining bugs. Refined css/responsive layout Project due at 9pm.
 
 ## Showcase ::
-<p align="center"> </br>
-  <img width="460" height="auto" src=" " alt=" ">
+<p align="center">Provided Comp Mobile View</br>
+  <img width="460" height="auto" src="assets/COMP-mobile.png" alt="Image of mobile view comp next to actual app mobile view">
 </p>
-<p align="center"> </br>
-  <img width="460" height="auto" src=" " alt=" ">
+
+<p align="center">Provided Comp Desktop View</br>
+  <img width="460" height="auto" src="assets/COMP-Desktop.png" alt="Image of desktop view comp next to actual app desktop view">
 </p>
-<p align="center"> </br>
-  <img width="460" height="auto" src=" " alt=" ">
+
+<p align="center">Actual Application Desktop View</br>
+  <img width="460" height="auto" src="assets/APPLICATION-Desktop.png" alt="Image of mobile view comp next to actual app mobile view">
 </p>
-<p align="center"></br>
-  <img width="200" height="auto" src=" " alt=" ">
+
+<p align="center">Journey Through Desktop Application</br>
+  <img width="200" height="auto" src="assets/Desktop-journey.gif" alt="Video showing various actions taken with desktop app">
+</p>
+
+<p align="center">Journey Through Mobile Application</br>
+  <img width="200" height="auto" src="assets/Mobile-Journey.gif" alt="Video showing various actions taken with mobile app">
 </p>
 
 Project spec & rubric can be found [here](https://github.com/turingschool-examples/ideabox-boilerplate).

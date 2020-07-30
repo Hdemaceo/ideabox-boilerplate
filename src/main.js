@@ -29,7 +29,6 @@ window.addEventListener("load", onLoad);
 
 // FUNCTIONS:
 function toggleMenu() {
-  console.log('hi')
   closedNavigation.classList.toggle("hidden")
   openNavigation.classList.toggle("hidden")
 }
@@ -45,7 +44,7 @@ function findIdeas(event) {
       displayUserCards(foundIdeas)
     }
     if (foundIdeas.length === 0){
-      ideaCardContainer.innerHTML = ""
+      ideaCardContainer.innerHTML = "";
     }
   }
 }
@@ -59,7 +58,6 @@ function onLoad() {
 function showStarredIdeas() {
     showButtonHandler()
     toggleButtonName()
-
 }
 
 function showButtonHandler() {
@@ -81,10 +79,8 @@ function showStarredIdeasOnly() {
 }
 
 function toggleButtonName() {
-  console.log(showStarredIdeasButton.innerText)
     if (showStarredIdeasButton.innerText === "Show Starred Ideas"){
       showStarredIdeasButton.innerText = "Show All Ideas"
-      console.log(showStarredIdeasButton.innerText)
   } else if (showStarredIdeasButton.innerText === "Show All Ideas"){
       showStarredIdeasButton.innerText = "Show Starred Ideas"
   }
