@@ -7,14 +7,17 @@ var search = document.querySelector(".search-input")
 // BUTTONS:
 var saveButton = document.querySelector(".save-button");
 var searchButton = document.querySelector(".search-img");
-var menuButton = document.querySelector(".open-nav-image");
 var showStarredIdeasButton = document.querySelector(".show-starred-button");
-var closeNavViewButton = document.querySelector(".close-nav-view");
 
+var closeNavigationButton = document.querySelector(".close-nav-view");
+var openNavigationButton = document.querySelector(".open-nav-image")
+var closedNavigation = document.querySelector(".purple-4");
+var openNavigation = document.querySelector(".nav-view-container")
 // CONTAINERS:
 var ideaCardContainer = document.querySelector(".idea-cards");
 
 // EVENT LISTENERS:
+openNavigationButton.addEventListener("click", toggleMenu);
 search.addEventListener("input", findIdeas);
 showStarredIdeasButton.addEventListener('click', showStarredIdeas);
 saveButton.addEventListener("click", createNewIdeaCard);
@@ -25,6 +28,12 @@ window.addEventListener("load", onLoad);
 
 
 // FUNCTIONS:
+function toggleMenu() {
+  console.log('hi')
+  closedNavigation.classList.toggle("hidden")
+  openNavigation.classList.toggle("hidden")
+}
+
 function findIdeas(event) {
   var foundIdeas = [];
   var inputByUser = event.target.value.toLowerCase();

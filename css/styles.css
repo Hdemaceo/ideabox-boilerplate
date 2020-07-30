@@ -91,6 +91,7 @@ body {
       height: 13em;
       flex-direction: column;
       padding-left: 8%;
+      
   }
 
   .header-text {
@@ -303,7 +304,7 @@ body {
   .nav-menu {
     display: flex;
     flex-direction: row;
-    width: 69vh;
+    width: 73.5vh;
     padding: 1%;
   }
 
@@ -313,7 +314,7 @@ body {
       align-items: center;
       justify-content: space-between;
       padding: 2%;
-      width: 68vh;
+      width: 72vh;
     }
 
     .top-nav-bar{
@@ -365,7 +366,7 @@ body {
       height: 400px;
       padding: 2% 0% 4% 0%;
       align-items: center;
-      width: 70vh;
+      width: 75vh;
     }
 
     .title, .body-title{
@@ -584,6 +585,7 @@ body {
       flex-direction: column;
       padding: 7%;
       width: 16vh;
+      position: fixed;
   }
 
     .close-nav-view {
@@ -596,7 +598,7 @@ body {
       flex-direction: column;
       /* flex-grow: 2; */
       /* height: 59%; */
-      padding: 2% 0% 1% 0%;
+      padding: 2% 0% 1% 56%;
       align-items: center;
       width: 100vh;
   }
@@ -751,7 +753,7 @@ body {
     /* height: 59%; */
     padding: 7% 0% 1% 0%;
     align-items: center;
-    width: 72vh;
+    width: 100vh;
   }
 
   .idea-cards {
