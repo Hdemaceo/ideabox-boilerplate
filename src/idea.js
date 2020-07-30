@@ -9,10 +9,9 @@ class Idea {
 
   saveToStorage() {
      localStorage.setItem("storedUserIdeas", JSON.stringify(userIdeas));
-
    }
-  deleteFromStorage() {
 
+  deleteFromStorage() {
     var localStorageIdeas = JSON.parse(localStorage.getItem("storedUserIdeas"));
     for (var i = 0; i < localStorageIdeas.length; i++){
       if (localStorageIdeas[i].id === this.id) {
@@ -21,7 +20,7 @@ class Idea {
     }
     localStorage.setItem("storedUserIdeas", JSON.stringify(localStorageIdeas))
  }
-
+ 
   updateIdea() {
     this.star = !this.star
     this.star ? this.src = "assets/star-active.svg" : this.src = "assets/star.svg"
