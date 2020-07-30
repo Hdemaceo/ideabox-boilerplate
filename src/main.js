@@ -117,6 +117,7 @@ function enableSaveButton() {
   if(titleInput.length !== 0 && bodyInput.length !== 0) {
     saveButton.style.opacity = 1;
     saveButton.disabled = false;
+    saveButton.style.cursor = "pointer";
   } else {
     disableSaveButton();
   }
