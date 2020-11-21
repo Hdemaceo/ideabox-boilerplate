@@ -5,8 +5,8 @@
 - [Demaceo Howard](https://github.com/Hdemaceo)
 
 ### Project Links ::
-- [Repo](https://github.com/Hdemaceo/ideabox-boilerplate)
-- [Deployed Page](https://hdemaceo.github.io/ideabox-boilerplate/)
+- [Repo](https://github.com/demaceo/ideabox-boilerplate)
+- [Deployed Page](https://demaceo.github.io/ideabox-boilerplate/)
 
 ## Set-up ::
 - Create repo and clone to personal computer
